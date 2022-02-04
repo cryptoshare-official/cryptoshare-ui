@@ -1,18 +1,6 @@
 import React from 'react'
-import Head from 'next/head'
-import Logo from '../assets/images/vercel.svg'
+import HomePage from '@/pages/home'
 
-const Home: React.FC = () => {
-    return (
-        <div>
-            <Head>
-                <title>Create Next App</title>
-            </Head>
-
-            <Logo />
-            <h1>Hello World</h1>
-        </div>
-    )
-}
+const Home: React.FC = () => <HomePage />
 
 export default Home

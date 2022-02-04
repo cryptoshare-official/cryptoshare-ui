@@ -1,5 +1,4 @@
 import { createGlobalStyle } from 'styled-components'
-// import './global.css'
 
 export default createGlobalStyle`
   * {
@@ -12,5 +11,9 @@ export default createGlobalStyle`
     background: ${props => props.theme.colors.background};
     color: ${props => props.theme.colors.text};
     font: 400 16px Roboto, sans-serif;
+  }
+
+  #__next {
+      height: 100vh;
   }
 `
