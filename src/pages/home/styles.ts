@@ -5,6 +5,7 @@ export const Container = styled.section.attrs({
         flex
         w-full
         h-full
+        flex-col
         items-center
         justify-center
         text-green-500

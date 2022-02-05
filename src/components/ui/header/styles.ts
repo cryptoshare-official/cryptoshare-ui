@@ -4,7 +4,7 @@ import tw from 'twin.macro'
 const paddingDefault = tw`py-1 px-2`
 
 export const Container = styled.nav.attrs({
-    className: ` flex px-8 py-4 items-center`
+    className: `flex px-8 py-4 items-center`
 })`
     background: #f4faff;
 `
