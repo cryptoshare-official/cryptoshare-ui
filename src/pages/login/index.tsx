@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
-import { Container, Title } from './styles'
+import { Container, Title } from '@/styles/pages/login'
 
 const Login: React.FC = () => {
     return (

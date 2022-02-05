@@ -1,17 +1,13 @@
 import React from 'react'
 import Head from 'next/head'
 import { useMapState } from '@/hooks'
-import { useDispatch } from 'react-redux'
-import { Container, Title } from './styles'
+import { Container, Title } from '@/styles/pages/home'
 
 import { EventState } from '@/store/interfaces/eventState.interface'
 import { setEvent } from '@/store/reducers/event.reducer'
 
 const Home: React.FC = () => {
     const { events } = useMapState('event') as EventState
-    const dispatch = useDispatch()
-
-    console.log('::::', events)
     return (
         <>
             <Head>
@@ -23,7 +19,7 @@ const Home: React.FC = () => {
 
                 <ul>
                     {events.map((item, index) => (
-                        <li>{item}</li>
+                        <li key={index}>{item}</li>
                     ))}
                 </ul>
 
