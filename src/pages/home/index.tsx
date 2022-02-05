@@ -1,3 +1,4 @@
+import React from 'react'
 import Head from 'next/head'
 import { useMapState } from '@/hooks'
 import { Container } from '@/styles/pages/home'
