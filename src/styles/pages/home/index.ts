@@ -8,7 +8,6 @@ export const Container = styled.section.attrs({
         flex-col
         items-center
         justify-center
-        text-green-500
     `
 })``
 
