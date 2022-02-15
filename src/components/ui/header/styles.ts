@@ -1,46 +1,46 @@
 import tw from 'twin.macro'
-import NextLink from 'next/link'
 import styled from 'styled-components'
+import { AppButton, AppContainer } from '@/styles/css/components'
 
-const paddingDefault = tw`py-1 px-2`
+export const Nav = styled.nav`
+    ${tw`flex items-center fixed w-full`}
 
-export const Container = styled.nav.attrs({
-    className: `flex px-8 py-4 items-center`
-})`
-    background: #ffffff;
+    z-index: 10;
+    transition: all ease-out 0.5s;
     box-shadow: 0px 4px 16px 0px #adb4b43d;
-`
+    height: ${props => props.theme.variables.navHeight};
+    background: ${props => props.theme.colors.background};
 
-export const LogoContainer = styled.figure.attrs({ className: `mr-4` })`
-    ${paddingDefault}
-`
-
-export const LinkGroup = styled.article.attrs({
-    className: `
-        flex
-        flex-1
-        justify-between
-    `
-})`
-    > a {
-        ${paddingDefault}
-        border-radius: 4px;
-
-        &:hover {
-            background-color: #dfe9f2;
-            color: ${props => props.theme.colors.primary};
-        }
+    &.transparent-nav {
+        background: none !important;
+        box-shadow: none;
     }
 `
-export const Link = styled(NextLink).attrs({
-    className: `
 
-    `
-})``
+export const Container = styled(AppContainer)`
+    ${tw`flex items-center w-full pt-0`}
+`
 
-export const OptionsGroup = styled.article.attrs({
-    className: `flex items-center`
-})`
-    ${paddingDefault}
+export const LogoContainer = styled.figure`
+    ${tw`mr-4 py-1`}
+`
+
+export const LinkGroup = styled.article`
+    ${tw`flex flex-1 justify-between px-12`}
+`
+
+export const Link = styled.a`
+    ${tw`text-sm`}
+    color: ${props => props.theme.colors.primary}
+`
+
+export const OptionsGroup = styled.article`
     margin-left: auto;
+    ${tw`flex items-center py-1 px-2`}
+`
+
+export const Button = styled(AppButton)`
+    letter-spacing: 1px;
+    background: ${props => props.theme.colors.gradient};
+    ${tw`px-8 mr-4 uppercase text-white text-sm`}
 `

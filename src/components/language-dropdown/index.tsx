@@ -4,8 +4,11 @@ import { LanguageTypes } from '@/enums/language.enum'
 import { setLanguage } from '@/store/reducers/language.reducer'
 import { LanguageStateInterface } from '@/store/interfaces/languageState.interface'
 
+import PTLogo from '@/assets/images/languages/pt.png'
+import ENLogo from '@/assets/images/languages/en.png'
+import ESLogo from '@/assets/images/languages/es.png'
+
 import { Container, Button, OptionContainer, Option } from './styles'
-import PTLogo from '../../assets/images/languages/pt.svg'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
@@ -15,9 +18,16 @@ const LanguageDropdown: React.FC = () => {
     const { currentLanguage } = useMapState(
         'language'
     ) as LanguageStateInterface
+
     const languages = Object.keys(LanguageTypes).map((id: string) => ({
         id
     }))
+
+    const imageDisct = {
+        [LanguageTypes.pt]: PTLogo,
+        [LanguageTypes.en]: ENLogo,
+        [LanguageTypes.es]: ESLogo
+    }
 
     const toggle = () => setIsOpen(!isOpen)
     const onChangeLanguage = (language: string) => {
@@ -25,20 +35,15 @@ const LanguageDropdown: React.FC = () => {
         toggle()
     }
 
-    const currentLanguageImage = () => {
-        const imageDisct = {
-            pt: <PTLogo />,
-            en: <PTLogo />,
-            es: <PTLogo />
-        }
-
-        return imageDisct[currentLanguage]
-    }
-
     return (
         <Container>
             <Button onClick={() => toggle()}>
-                {currentLanguageImage()}
+                <img
+                    width="38px"
+                    height="38px"
+                    alt={currentLanguage}
+                    src={imageDisct[currentLanguage]}
+                />
                 <FontAwesomeIcon icon={faChevronDown} size="lg" />
             </Button>
 

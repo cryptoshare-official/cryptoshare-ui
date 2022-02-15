@@ -1,53 +1,44 @@
+import tw from 'twin.macro'
 import styled from 'styled-components'
+import { AppButton } from '@/styles/css/components'
 
-export const Container = styled.section.attrs({
-    className: `
-        relative
-        inline-block
-    `
-})``
-
-export const Button = styled.button.attrs({
-    className: `
-        pl-2
-        pr-3
-        bg-white
-        shadow-sm
-        rounded-md
-        font-medium
-        inline-flex
-        items-center
-        text-gray-700
-        justify-between
-        hover:bg-gray-50
-    `
-})`
-    width: 90px;
-    height: 44px;
-    background: #f5f5f5;
-    border-radius: 22px;
+export const Container = styled.section`
+    ${tw`relative inline-block`}
 `
 
-export const OptionContainer = styled.article.attrs({
-    className: `
-        origin-top-right
-        absolute
-        right-0
+export const Button = styled(AppButton)`
+    ${tw`
+        pl-2
+        pr-3
+        shadow-sm
+        inline-flex
+        items-center
+        justify-between
+        hover:bg-gray-50
+    `}
+
+    width: 90px;
+    background: #f5f5f5;
+`
+
+export const OptionContainer = styled.article`
+    ${tw`
         mt-2
         py-1
         w-56
-        rounded-md
-        shadow-lg
-        bg-white
         ring-1
+        right-0
+        absolute
+        bg-white
+        shadow-lg
+        rounded-md
         ring-black
         ring-opacity-5
+        origin-top-right
         focus:outline-none
-    `
-})``
+    `}
+`
 
-export const Option = styled.button.attrs({
-    className: `
-        p-3
-    `
-})``
+export const Option = styled.button`
+    ${tw`p-3 uppercase w-full text-left`}
+`

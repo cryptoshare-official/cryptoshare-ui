@@ -4,7 +4,14 @@ const content = [
     './src/components/**/*.{js,jsx,ts,tsx}'
 ]
 
-const theme = {}
+const theme = {
+    fontSize: {
+        sm: '12px',
+        base: '14px',
+        lg: '18px',
+        xl: '36px'
+    }
+}
 
 module.exports = {
     theme,

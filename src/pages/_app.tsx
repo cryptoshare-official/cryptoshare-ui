@@ -1,4 +1,4 @@
-import '@/assets/styles/css/global.css'
+import '@/styles/css/global.css'
 
 import store from '@/store'
 import { Provider } from 'react-redux'
@@ -7,9 +7,9 @@ import { PersistGate } from 'redux-persist/integration/react'
 
 import React from 'react'
 import { AppProps } from 'next/app'
-import theme from '../assets/styles/theme'
+import theme from '@/styles/css/ts/theme'
 import Header from '@/components/ui/header'
-import GlobalStyle from '../assets/styles/global'
+import GlobalStyle from '../styles/css/ts/global'
 import { ThemeProvider } from 'styled-components'
 
 const persistor = persistStore(store)
@@ -21,6 +21,7 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
                 <ThemeProvider theme={theme}>
                     <GlobalStyle />
                     <Header />
+
                     <Component {...pageProps} />
                 </ThemeProvider>
             </PersistGate>

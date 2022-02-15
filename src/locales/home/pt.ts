@@ -1,5 +1,5 @@
 const pt = {
-    hello: 'Oi'
+    ourAssets: 'Conheça nossos ativos'
 }
 
 export default pt

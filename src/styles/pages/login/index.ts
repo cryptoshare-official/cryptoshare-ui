@@ -1,10 +1,6 @@
 import styled from 'styled-components'
+import { AppContainer } from '@/styles/css/components'
 
-export const Container = styled.section``
+export const Container = styled(AppContainer)``
 
-export const Title = styled.h1.attrs({
-    className: `
-        text-green-500
-        ml-8
-    `
-})``
+export const Title = styled.h1``

@@ -1,18 +1,26 @@
+import tw from 'twin.macro'
 import styled from 'styled-components'
+import { AppContainer, AppSeparator } from '@/styles/css/components'
 
-export const Container = styled.section.attrs({
-    className: `
-        flex
-        w-full
-        h-full
-        flex-col
-        items-center
-        justify-center
-    `
-})``
+export const Container = styled(AppContainer)`
+    ${tw`pt-10 pb-6`}
+`
 
-export const Title = styled.h1.attrs({
-    className: `
-        text-green-500
-    `
-})``
+export const Title = styled.h1`
+    ${tw`flex items-center text-lg font-bold`}
+    color: ${props => props.theme.colors.gray};
+`
+
+export const Separator = styled(AppSeparator)`
+    width: 40px;
+    ${tw`mr-4`}
+`
+
+export const AssetsGrid = styled.div`
+    ${tw`mt-8 grid grid-cols-2 gap-4 px-12`}
+    padding-left: 8rem;
+    padding-right: 8rem;
+    > article {
+        min-height: 270px;
+    }
+`
