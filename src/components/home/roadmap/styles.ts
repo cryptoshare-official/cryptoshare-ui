@@ -12,7 +12,7 @@ export const Title = styled.h1`
 `
 
 export const Subtitle = styled.p`
-    ${tw`text-base mt-4 w-2/3`}
+    ${tw`text-base mt-4 w-2/3 md:w-full`}
     color: ${props => props.theme.colors.blue};
 `
 
@@ -22,12 +22,24 @@ export const Separator = styled(AppSeparator)`
 `
 
 export const Content = styled.article`
-    ${tw`pl-14`}
+    ${tw`pl-14 md:pl-0`}
 `
 
 export const Article = styled.article`
-    ${tw`my-6 ml-1 w-2/3`}
+    ${tw`my-6 ml-1 w-2/3 md:w-full`}
     border-left: 2px solid #F2F2F2;
+`
+
+export const RoadmapSeparator = styled.span`
+    ${tw`text-sm flex items-center uppercase`}
+    color: #d8d8d8;
+    letter-spacing: 2px;
+
+    &:after {
+        ${tw`inline-block ml-6 w-1/3`}
+        content: '';
+        border: 1px solid #f2f2f2;
+    }
 `
 
 export const Item = styled.div`

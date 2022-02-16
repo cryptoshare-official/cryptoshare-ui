@@ -26,7 +26,7 @@ export const Separator = styled(AppSeparator)`
 `
 
 export const Grid = styled.article`
-    ${tw`my-6 grid grid-cols-3 gap-4`}
+    ${tw`my-6 grid grid-cols-3 gap-4 sm:flex sm:flex-col`}
 `
 
 export const Card = styled.div`

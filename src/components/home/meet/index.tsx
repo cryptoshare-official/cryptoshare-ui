@@ -34,7 +34,7 @@ const Meet: React.FC = () => {
     ]
 
     return (
-        <Container>
+        <Container id="meet">
             <Content>
                 <Title>
                     <Separator />

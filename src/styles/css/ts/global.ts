@@ -13,6 +13,10 @@ export default createGlobalStyle`
     font: 400 18px Montserrat, sans-serif;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   #__next {
       height: 100vh;
   }

@@ -10,7 +10,8 @@ import {
     Article,
     Item,
     ItemDate,
-    ItemLabel
+    ItemLabel,
+    RoadmapSeparator
 } from './styles'
 
 const Roadmap: React.FC = () => {
@@ -65,7 +66,7 @@ const Roadmap: React.FC = () => {
     ]
 
     return (
-        <Container>
+        <Container id="roadmap">
             <Title>
                 <Separator />
                 Roadmap
@@ -87,6 +88,8 @@ const Roadmap: React.FC = () => {
                         </Item>
                     ))}
                 </Article>
+
+                <RoadmapSeparator>Upcomming</RoadmapSeparator>
 
                 <Article>
                     {nextItems.map(({ date, description }, index) => (

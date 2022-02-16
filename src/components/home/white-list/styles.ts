@@ -3,18 +3,18 @@ import styled from 'styled-components'
 import { AppButton, AppContainer } from '@/styles/css/components'
 
 export const Container = styled.div`
-    ${tw`py-8 mt-8 `}
+    ${tw`py-8 mt-8`}
     background: ${props => props.theme.colors.gradient};
 `
 
 export const Content = styled(AppContainer)`
-    ${tw`py-0 flex justify-center items-center`}
+    ${tw`py-0 flex justify-center items-center sm:justify-between`}
 `
 
 export const Title = styled.h1`
-    ${tw`flex mr-8 font-bold`}
+    ${tw`flex mr-8 font-bold sm:text-lg`}
     color: #ffffff;
-    font-size: 46px;
+    font-size: 40px;
     font-weight: bold;
 `
 

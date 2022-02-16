@@ -2,7 +2,7 @@ import tw from 'twin.macro'
 import styled from 'styled-components'
 
 export const AppContainer = styled.section`
-    ${tw`container mx-auto px-8`}
+    ${tw`container mx-auto px-8 md:px-4`}
     padding-top: ${props =>
         props.theme.variables.navHeight &&
         `calc(${props.theme.variables.navHeight} + 26px)`};

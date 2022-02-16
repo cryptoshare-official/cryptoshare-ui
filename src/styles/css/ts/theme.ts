@@ -1,4 +1,4 @@
-const variables = {
+export const variablesCSS = {
     colorPrimary: '#5558CA',
     colorSecondary: '#C837AB',
     colorDanger: '#FFC5C5',
@@ -9,17 +9,17 @@ const variables = {
 }
 
 const lightMode = {
-    variables,
+    variables: variablesCSS,
     colors: {
         text: '#111827',
         background: '#ffffff',
-        gray: variables.gray,
-        blue: variables.blue,
-        danger: variables.colorDanger,
-        primary: variables.colorPrimary,
-        warning: variables.colorWarning,
-        secondary: variables.colorPrimary,
-        gradient: `linear-gradient(252.78deg, ${variables.colorPrimary} 20.97%, ${variables.colorSecondary} 76.04%)`
+        gray: variablesCSS.gray,
+        blue: variablesCSS.blue,
+        danger: variablesCSS.colorDanger,
+        primary: variablesCSS.colorPrimary,
+        warning: variablesCSS.colorWarning,
+        secondary: variablesCSS.colorSecondary,
+        gradient: `linear-gradient(252.78deg, ${variablesCSS.colorPrimary} 20.97%, ${variablesCSS.colorSecondary} 76.04%)`
     }
 }
 

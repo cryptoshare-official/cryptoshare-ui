@@ -17,9 +17,10 @@ export const Separator = styled(AppSeparator)`
 `
 
 export const AssetsGrid = styled.div`
-    ${tw`mt-8 grid grid-cols-2 gap-4 px-12`}
+    ${tw`mt-8 grid grid-cols-2 gap-4 px-12 md:px-0 sm:flex sm:flex-col sm:px-0`}
     padding-left: 8rem;
     padding-right: 8rem;
+
     > article {
         min-height: 270px;
     }
