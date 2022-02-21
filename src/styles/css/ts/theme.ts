@@ -4,9 +4,11 @@ export const variablesCSS = {
     colorDanger: '#FFC5C5',
     colorWarning: '#FFEFAC',
     colorSuccess: '#7ED321',
+    footerHeight: '170px',
     navHeight: '100px',
     gray: '#424242',
-    blue: '#21235A'
+    blue: '#21235A',
+    gray_1: '#333333'
 }
 
 const lightMode = {
@@ -16,6 +18,7 @@ const lightMode = {
         background: '#ffffff',
         gray: variablesCSS.gray,
         blue: variablesCSS.blue,
+        gray_1: variablesCSS.gray_1,
         danger: variablesCSS.colorDanger,
         primary: variablesCSS.colorPrimary,
         warning: variablesCSS.colorWarning,

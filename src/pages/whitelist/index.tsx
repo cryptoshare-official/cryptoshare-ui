@@ -23,8 +23,7 @@ import {
     ScoreCardAction,
     ScoreCardButton,
     ScoreTitleBadge,
-    ScoreTitleContent,
-    GradientContainer
+    ScoreTitleContent
 } from '@/styles/pages/whitelist'
 import { BsFillTriangleFill } from 'react-icons/bs'
 import {
@@ -145,7 +144,7 @@ const WhiteList: React.FC = () => {
                                 <i>
                                     <BsFillTriangleFill />
                                 </i>
-                                + {item.score} {translate.score}
+                                +{item.score} {translate.score}
                             </ScoreCardValue>
                             <ScoreCardAction>
                                 <ScoreCardButton>Realizar</ScoreCardButton>
@@ -168,7 +167,7 @@ const WhiteList: React.FC = () => {
                                 <i>
                                     <BsFillTriangleFill />
                                 </i>
-                                + {item.score} {translate.score}
+                                +{item.score} {translate.score}
                             </ScoreCardValue>
                             <ScoreCardAction>
                                 <ScoreCardButton>

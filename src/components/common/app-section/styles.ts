@@ -14,7 +14,7 @@ export const Title = styled.h3`
 `
 
 export const SubTitle = styled.h4`
-    ${tw`text-base font-bold pl-14 md:pl-0`}
+    ${tw`text-base font-bold pl-14 sm:text-sm`}
     color: ${props => props.theme.colors.blue};
 `
 

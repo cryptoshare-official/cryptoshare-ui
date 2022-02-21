@@ -28,28 +28,28 @@ export const ScoreTitle = styled.h1`
 `
 
 export const ScoreSubtitle = styled.h1`
-    ${tw`text-base font-bold`}
+    ${tw`text-base font-bold sm:text-sm`}
     color: ${props => props.theme.colors.blue};
 `
 
 export const ScoreTitleBox = styled.div``
 
 export const ScoreTitleBadge = styled.span`
-    ${tw`px-5 py-3 text-sm lowercase`}
+    ${tw`px-5 py-3 text-sm lowercase sm:text-center`}
     color: #FFFFFF;
     background: #21235a;
     border-radius: 15px;
 `
 
 export const ScoreCard = styled(Card)`
-    ${tw`px-4 py-6 my-2 text-base grid`}
-    grid-template-columns: 5% 1fr 35% 15%;
+    ${tw`px-4 py-6 my-2 text-base grid sm:text-sm sm:px-2 sm:py-4`}
+    grid-template-columns: auto 1fr 30% 15%;
 `
 
 export const ScoreCardIcon = styled.div`
     width: 35px;
     height: 35px;
-    ${tw`rounded-full flex items-center justify-center`}
+    ${tw`rounded-full flex items-center justify-center mr-3`}
     background: ${props => props.theme.colors.gradient};
 
     > svg {
@@ -98,11 +98,11 @@ export const ScoreCardButton = styled.button`
 `
 
 export const Form = styled.form`
-    ${tw`flex justify-between items-end`}
+    ${tw`flex justify-between items-end sm:flex-col`}
 `
 
 export const FormGroup = styled(AppFormGroup)`
-    ${tw`my-0`}
+    ${tw`my-0 sm:w-full sm:mb-4`}
     width: calc(60% - 45px);
 `
 
@@ -113,7 +113,7 @@ export const Label = styled.label`
 export const Input = styled.input``
 
 export const Button = styled(AppButton)`
-    ${tw`uppercase font-semibold`}
+    ${tw`uppercase font-semibold sm:w-full`}
     width: 40%;
     color: #ffffff;
     border-radius: 4px;
