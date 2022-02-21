@@ -1,28 +1,14 @@
 import tw from 'twin.macro'
 import styled from 'styled-components'
-import { AppContainer, AppSeparator } from '@/styles/css/components'
+import { AppContainer } from '@/styles/css/components'
 
 export const Container = styled(AppContainer)`
     ${tw`py-6`}
 `
 
-export const Title = styled.h1`
-    ${tw`flex items-center text-lg font-bold`}
-    color: ${props => props.theme.colors.gray};
-`
-
 export const Subtitle = styled.p`
     ${tw`text-base mt-4 w-2/3 md:w-full`}
     color: ${props => props.theme.colors.blue};
-`
-
-export const Separator = styled(AppSeparator)`
-    ${tw`mr-4`}
-    width: 40px;
-`
-
-export const Content = styled.article`
-    ${tw`pl-14 md:pl-0`}
 `
 
 export const Article = styled.article`
@@ -36,7 +22,7 @@ export const RoadmapSeparator = styled.span`
     letter-spacing: 2px;
 
     &:after {
-        ${tw`inline-block ml-6 w-1/3`}
+        ${tw`inline-block ml-6 w-1/3 md:w-full`}
         content: '';
         border: 1px solid #f2f2f2;
     }

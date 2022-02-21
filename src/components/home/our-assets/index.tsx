@@ -1,7 +1,7 @@
 import CardActive from '@/components/common/card-active'
 import { useTranslate } from '@/hooks/translate.hook'
 import { HomeTranslateType } from '@/locales/types'
-import locale from '@/locales/home'
+import locale from '@/locales/pages/home'
 import React from 'react'
 
 import { Container, Title, Separator, AssetsGrid } from './styles'

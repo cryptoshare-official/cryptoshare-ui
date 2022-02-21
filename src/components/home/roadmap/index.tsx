@@ -1,12 +1,10 @@
 import CircleProgressBar from '@/components/common/circle-progress-bar'
+import AppSection from '@/components/common/app-section'
 import React from 'react'
 
 import {
     Container,
-    Title,
     Subtitle,
-    Separator,
-    Content,
     Article,
     Item,
     ItemDate,
@@ -67,12 +65,7 @@ const Roadmap: React.FC = () => {
 
     return (
         <Container id="roadmap">
-            <Title>
-                <Separator />
-                Roadmap
-            </Title>
-
-            <Content>
+            <AppSection title="Roadmap">
                 <Subtitle>
                     Com base na evolução dos negócios do grupo Crypto Share, o
                     projeto de democratização dos investimentos na web3.0 tem
@@ -104,7 +97,7 @@ const Roadmap: React.FC = () => {
                     Mais Ativos e Parcerias em evolução contínua de acordo com
                     as decisões da comunidade
                 </Subtitle>
-            </Content>
+            </AppSection>
         </Container>
     )
 }
