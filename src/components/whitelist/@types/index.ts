@@ -12,4 +12,6 @@ export interface ScoreGridProps {
     items: ScoreInterface[]
 }
 
-export interface GoldListRegisterProps {}
+export interface GoldListRegisterProps {
+    onSubmit?: Function
+}

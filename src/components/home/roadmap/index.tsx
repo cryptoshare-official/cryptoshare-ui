@@ -1,4 +1,3 @@
-import CircleProgressBar from '@/components/common/circle-progress-bar'
 import AppSection from '@/components/common/app-section'
 import React from 'react'
 
