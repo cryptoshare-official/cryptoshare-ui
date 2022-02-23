@@ -1,14 +1,11 @@
 import React from 'react'
-import Head from 'next/head'
+import AppHead from '@/components/common/app-head'
 import { Container, Title } from '@/styles/pages/whitepaper'
 
 const Whitepaper: React.FC = () => {
     return (
         <Container>
-            <Head>
-                <title>Whitepaper - Cripto Share</title>
-            </Head>
-
+            <AppHead title="Whitepaper" />
             <Title>Whitepaper</Title>
         </Container>
     )

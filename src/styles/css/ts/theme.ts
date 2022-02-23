@@ -1,14 +1,18 @@
+const navHeight = 100
+const footerHeight = 170
+
 export const variablesCSS = {
-    colorPrimary: '#5558CA',
-    colorSecondary: '#C837AB',
-    colorDanger: '#FFC5C5',
-    colorWarning: '#FFEFAC',
-    colorSuccess: '#7ED321',
-    footerHeight: '170px',
-    navHeight: '100px',
     gray: '#424242',
     blue: '#21235A',
-    gray_1: '#333333'
+    gray_1: '#333333',
+    colorDanger: '#FFC5C5',
+    colorPrimary: '#5558CA',
+    colorWarning: '#FFEFAC',
+    colorSuccess: '#7ED321',
+    colorSecondary: '#C837AB',
+    navHeight: `${navHeight}px`,
+    footerHeight: `${footerHeight}px`,
+    paddingTopContainer: `calc(${navHeight}px + 26px)`
 }
 
 const lightMode = {

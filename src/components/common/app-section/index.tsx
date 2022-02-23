@@ -7,7 +7,7 @@ interface AppSectionProps {
     contentClass?: string
     containerClass?: string
     separatorClass?: string
-    title: string | React.ReactNode
+    title?: string | React.ReactNode
 }
 
 const AppSection: React.FC<AppSectionProps> = props => {
@@ -23,12 +23,16 @@ const AppSection: React.FC<AppSectionProps> = props => {
 
     return (
         <Container className={containerClass}>
-            <Title className={titleClass}>
-                <Separator className={separatorClass} />
-                {title}
-            </Title>
+            {title && (
+                <>
+                    <Title className={titleClass}>
+                        <Separator className={separatorClass} />
+                        {title}
+                    </Title>
 
-            <SubTitle>{subtitle}</SubTitle>
+                    <SubTitle>{subtitle}</SubTitle>
+                </>
+            )}
 
             <Content className={contentClass}>{children}</Content>
         </Container>

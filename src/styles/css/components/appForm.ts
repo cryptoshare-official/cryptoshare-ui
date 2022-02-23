@@ -1,3 +1,4 @@
+import tw from 'twin.macro'
 import styled from 'styled-components'
 
 export const AppFormGroup = styled.div`
@@ -18,9 +19,15 @@ export const AppFormGroup = styled.div`
         border: 2px solid;
         padding: 4px 12px;
         border-radius: 4px;
+        ${tw`invalid:border-red-500`}
 
         &:focus {
             outline: none !important;
         }
+    }
+
+    > span {
+        ${tw`text-sm absolute mt-1`}
+        color: ${props => props.theme.colors.danger};
     }
 `

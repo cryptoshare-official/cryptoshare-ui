@@ -1,8 +1,8 @@
-import Head from 'next/head'
 import { useMapState } from '@/hooks'
 import React, { useEffect } from 'react'
 import Meet from '@/components/home/meet'
 import Roadmap from '@/components/home/roadmap'
+import AppHead from '@/components/common/app-head'
 import { scrollTo } from '@/helpers/scroll.helper'
 import WhiteList from '@/components/home/whitelist'
 import OurAssets from '@/components/home/our-assets'
@@ -26,9 +26,7 @@ const Home: React.FC = () => {
 
     return (
         <>
-            <Head>
-                <title>Home - Crypto Share</title>
-            </Head>
+            <AppHead title="Home" />
 
             <CarouselSlider />
             <OurAssets />

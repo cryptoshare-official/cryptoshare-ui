@@ -1,31 +1,3 @@
-import React from 'react'
-import Head from 'next/head'
-import { useForm } from 'react-hook-form'
-import locales from '@/locales/pages/whitelist'
-import { useTranslate } from '@/hooks/translate.hook'
-import { WhitelistTranslateType } from '@/locales/types'
-import AppSection from '@/components/common/app-section'
-import { WhitelistService } from '@/services/whitelist.service'
-import {
-    Card,
-    Form,
-    Label,
-    Input,
-    Button,
-    Container,
-    FormGroup,
-    ScoreCard,
-    ScoreTitle,
-    ScoreSubtitle,
-    ScoreTitleBox,
-    ScoreCardIcon,
-    ScoreCardTitle,
-    ScoreCardValue,
-    ScoreCardAction,
-    ScoreCardButton,
-    ScoreTitleBadge,
-    ScoreTitleContent
-} from '@/styles/pages/whitelist'
 import {
     FaLink,
     FaTwitter,
@@ -34,20 +6,17 @@ import {
     FaInstagram,
     FaTelegramPlane
 } from 'react-icons/fa'
-import { BsFillTriangleFill } from 'react-icons/bs'
+import React from 'react'
+import AppHead from '@/components/common/app-head'
+import { Container } from '@/styles/pages/whitelist'
+import Supershare from '@/components/whitelist/supershare'
+import Participate from '@/components/whitelist/participate'
+import { ScoreInterface } from '@/interfaces/whitelist.interface'
+import AboutWhitelist from '@/components/whitelist/about-whitelist'
+import GoldListRegister from '@/components/whitelist/gold-list-register'
 
 const WhiteList: React.FC = () => {
-    const translate = useTranslate<WhitelistTranslateType>(locales)
-    const whitelistService = new WhitelistService()
-    const { register, handleSubmit } = useForm()
-    const marginBottomSection = 'mb-12'
-
-    const onSubmit = async (data: any) => {
-        const response = await whitelistService.sendEmail(data.email)
-        console.log('RESPONSE :::', response)
-    }
-
-    const whitelistItems = [
+    const whitelistItems: ScoreInterface[] = [
         {
             id: 1,
             score: 2,
@@ -75,7 +44,7 @@ const WhiteList: React.FC = () => {
         }
     ]
 
-    const superShareItems = [
+    const superShareItems: ScoreInterface[] = [
         {
             id: 1,
             score: 2,
@@ -110,99 +79,13 @@ const WhiteList: React.FC = () => {
 
     return (
         <>
-            <Head>
-                <title>Whitelist - Crypto Share</title>
-            </Head>
+            <AppHead title="Whitelist" />
 
             <Container>
-                <AppSection
-                    title={translate.about}
-                    containerClass={marginBottomSection}
-                >
-                    <Card>{translate.aboutContent}</Card>
-                </AppSection>
-
-                <AppSection
-                    separatorClass="mb-5"
-                    titleClass="mb-5 items-start"
-                    containerClass={marginBottomSection}
-                    title={
-                        <ScoreTitleContent>
-                            <ScoreTitleBox>
-                                <ScoreTitle>{translate.participate}</ScoreTitle>
-                                <ScoreSubtitle>
-                                    {translate.participateSubTitle}
-                                </ScoreSubtitle>
-                            </ScoreTitleBox>
-
-                            <ScoreTitleBadge>
-                                0 {translate.score}
-                            </ScoreTitleBadge>
-                        </ScoreTitleContent>
-                    }
-                >
-                    {whitelistItems.map((item, index) => (
-                        <ScoreCard key={index}>
-                            <ScoreCardIcon>{item.icon}</ScoreCardIcon>
-                            <ScoreCardTitle>{item.title}</ScoreCardTitle>
-                            <ScoreCardValue>
-                                <i>
-                                    <BsFillTriangleFill />
-                                </i>
-                                +{item.score} {translate.score}
-                            </ScoreCardValue>
-                            <ScoreCardAction>
-                                <ScoreCardButton>
-                                    {translate.accomplish}
-                                </ScoreCardButton>
-                            </ScoreCardAction>
-                        </ScoreCard>
-                    ))}
-                </AppSection>
-
-                <AppSection
-                    title={translate.becomeSupershare}
-                    containerClass={marginBottomSection}
-                >
-                    <Card>{translate.becomeSupershareContent}</Card>
-
-                    {superShareItems.map((item, index) => (
-                        <ScoreCard key={index}>
-                            <ScoreCardIcon>{item.icon}</ScoreCardIcon>
-                            <ScoreCardTitle>{item.title}</ScoreCardTitle>
-                            <ScoreCardValue>
-                                <i>
-                                    <BsFillTriangleFill />
-                                </i>
-                                +{item.score} {translate.score}
-                            </ScoreCardValue>
-                            <ScoreCardAction>
-                                <ScoreCardButton>
-                                    {translate.accomplish}
-                                </ScoreCardButton>
-                            </ScoreCardAction>
-                        </ScoreCard>
-                    ))}
-                </AppSection>
-
-                <AppSection
-                    title={translate.openingGoldList}
-                    subtitle="25/03/2022"
-                    containerClass={marginBottomSection}
-                >
-                    <Card>
-                        <Form onSubmit={handleSubmit(onSubmit)}>
-                            <FormGroup>
-                                <Label>{translate.registerYourEmail}</Label>
-                                <Input {...register('email')} />
-                            </FormGroup>
-
-                            <Button type="submit">
-                                {translate.registerInterest}
-                            </Button>
-                        </Form>
-                    </Card>
-                </AppSection>
+                <AboutWhitelist />
+                <Participate scoreItems={whitelistItems} />
+                <Supershare scoreItems={superShareItems} />
+                <GoldListRegister />
             </Container>
         </>
     )
