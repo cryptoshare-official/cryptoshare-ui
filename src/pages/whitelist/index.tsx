@@ -2,9 +2,10 @@ import React from 'react'
 import Head from 'next/head'
 import { useForm } from 'react-hook-form'
 import locales from '@/locales/pages/whitelist'
-import AppSection from '@/components/common/app-section'
 import { useTranslate } from '@/hooks/translate.hook'
 import { WhitelistTranslateType } from '@/locales/types'
+import AppSection from '@/components/common/app-section'
+import { WhitelistService } from '@/services/whitelist.service'
 import {
     Card,
     Form,
@@ -25,23 +26,27 @@ import {
     ScoreTitleBadge,
     ScoreTitleContent
 } from '@/styles/pages/whitelist'
-import { BsFillTriangleFill } from 'react-icons/bs'
 import {
-    FaFacebookF,
-    FaInstagram,
-    FaTelegramPlane,
+    FaLink,
     FaTwitter,
     FaDiscord,
-    FaLink
+    FaFacebookF,
+    FaInstagram,
+    FaTelegramPlane
 } from 'react-icons/fa'
+import { BsFillTriangleFill } from 'react-icons/bs'
 
 const WhiteList: React.FC = () => {
     const translate = useTranslate<WhitelistTranslateType>(locales)
+    const whitelistService = new WhitelistService()
     const { register, handleSubmit } = useForm()
-
-    const onSubmit = (data: any) => console.log(data)
-
     const marginBottomSection = 'mb-12'
+
+    const onSubmit = async (data: any) => {
+        const response = await whitelistService.sendEmail(data.email)
+        console.log('RESPONSE :::', response)
+    }
+
     const whitelistItems = [
         {
             id: 1,
@@ -147,7 +152,9 @@ const WhiteList: React.FC = () => {
                                 +{item.score} {translate.score}
                             </ScoreCardValue>
                             <ScoreCardAction>
-                                <ScoreCardButton>Realizar</ScoreCardButton>
+                                <ScoreCardButton>
+                                    {translate.accomplish}
+                                </ScoreCardButton>
                             </ScoreCardAction>
                         </ScoreCard>
                     ))}

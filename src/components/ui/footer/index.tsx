@@ -1,30 +1,42 @@
 import React from 'react'
+import { getYear } from 'date-fns'
 import Logo from '@/assets/images/logo-white.png'
 import {
-    Container,
-    Article,
-    Separator,
     Small,
-    IconGroup,
-    Content
+    Article,
+    Content,
+    Container,
+    Separator,
+    IconGroup
 } from './styles'
 import {
-    FaFacebookF,
-    FaInstagram,
-    FaTelegramPlane,
     FaTwitter,
-    FaDiscord
+    FaDiscord,
+    FaInstagram,
+    FaFacebookF,
+    FaTelegramPlane
 } from 'react-icons/fa'
 
 const Footer: React.FC = () => {
+    const currentYear = getYear(new Date())
+    const openLink = (url: string) => window.open(url, '_blank')?.focus()
+
     const socialItems = [
         {
             title: 'Discord',
             icon: <FaDiscord />,
             link: 'https://discord.gg/8Smuuf3c'
         },
-        { title: 'Facebook', icon: <FaFacebookF />, link: '' },
-        { title: 'Twitter', icon: <FaTwitter />, link: '' },
+        {
+            title: 'Facebook',
+            icon: <FaFacebookF />,
+            link: 'https://www.facebook.com'
+        },
+        {
+            title: 'Twitter',
+            icon: <FaTwitter />,
+            link: 'https://www.twitter.com'
+        },
         {
             title: 'Instagram',
             icon: <FaInstagram />,
@@ -37,7 +49,6 @@ const Footer: React.FC = () => {
         }
     ]
 
-    const openLink = (url: string) => window.open(url, '_blank')?.focus()
     return (
         <Container>
             <Content>
@@ -58,7 +69,9 @@ const Footer: React.FC = () => {
                 </Article>
 
                 <Separator />
-                <Small>2022 Cryptoshare - Todos os direitos reservados</Small>
+                <Small>
+                    {currentYear} Cryptoshare - Todos os direitos reservados
+                </Small>
             </Content>
         </Container>
     )
