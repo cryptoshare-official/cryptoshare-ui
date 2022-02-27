@@ -22,7 +22,9 @@ const ScoreGrid: React.FC<ScoreGridProps> = props => {
                         +{item.score} {translate.score}
                     </Value>
                     <Action>
-                        <Button>{translate.accomplish}</Button>
+                        <Button onClick={() => props.onSelect(item)}>
+                            {translate.accomplish}
+                        </Button>
                     </Action>
                 </Card>
             ))}

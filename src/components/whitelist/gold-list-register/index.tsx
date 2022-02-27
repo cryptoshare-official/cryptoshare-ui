@@ -18,12 +18,11 @@ import {
     FormGroup
 } from './styles'
 
-const emailForm = yup.object().shape({
-    email: yup.string().email('Email invalido').required('Insira um email.')
-})
-
-const GoldListRegister: React.FC<GoldListRegisterProps> = () => {
+const GoldListRegister: React.FC<GoldListRegisterProps> = props => {
     const translate = useTranslate<WhitelistTranslateType>(locales)
+    const emailForm = yup.object().shape({
+        email: yup.string().email('Email invalido').required('Insira um email.')
+    })
 
     const {
         register,
@@ -33,15 +32,15 @@ const GoldListRegister: React.FC<GoldListRegisterProps> = () => {
         resolver: yupResolver(emailForm)
     })
 
-    const onSubmit = (data: any) => {
-        console.log('RESPONSE :::', data)
+    const handleSubmitForm = (data: any) => {
+        if (props.onSubmit) props.onSubmit(data)
     }
 
     return (
         <Container>
             <AppSection title={translate.openingGoldList} subtitle="25/03/2022">
                 <Card>
-                    <Form onSubmit={handleSubmit(onSubmit)}>
+                    <Form onSubmit={handleSubmit(handleSubmitForm)}>
                         <FormGroup>
                             <Label>{translate.registerYourEmail}</Label>
                             <Input {...register('email')} />

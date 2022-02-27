@@ -29,7 +29,10 @@ const Supershare: React.FC<SupershareProps> = props => {
 
             <Container>
                 <AppSection>
-                    <ScoreGrid items={props.scoreItems} />
+                    <ScoreGrid
+                        items={props.scoreItems}
+                        onSelect={props.onSelect}
+                    />
                 </AppSection>
             </Container>
         </>

@@ -6,9 +6,10 @@ import {
     FaInstagram,
     FaTelegramPlane
 } from 'react-icons/fa'
-import React from 'react'
+import React, { useState } from 'react'
 import AppHead from '@/components/common/app-head'
 import { Container } from '@/styles/pages/whitelist'
+import AuthModal from '@/components/common/auth-modal'
 import Supershare from '@/components/whitelist/supershare'
 import Participate from '@/components/whitelist/participate'
 import { ScoreInterface } from '@/interfaces/whitelist.interface'
@@ -16,6 +17,7 @@ import AboutWhitelist from '@/components/whitelist/about-whitelist'
 import GoldListRegister from '@/components/whitelist/gold-list-register'
 
 const WhiteList: React.FC = () => {
+    const [isModalLoginOpen, setModalLoginOpen] = useState(false)
     const whitelistItems: ScoreInterface[] = [
         {
             id: 1,
@@ -77,16 +79,41 @@ const WhiteList: React.FC = () => {
         }
     ]
 
+    const onSubmitGoldListForm = (data: { email: string }) => {
+        console.log('DATA :', data)
+    }
+
+    const onSelectWhitelist = (item: ScoreInterface) => {
+        console.log('Whitelist', item)
+        setModalLoginOpen(true)
+    }
+
+    const onSelectSupershare = (item: ScoreInterface) => {
+        console.log('Supershare', item)
+        setModalLoginOpen(true)
+    }
+
     return (
         <>
             <AppHead title="Whitelist" />
-
             <Container>
                 <AboutWhitelist />
-                <Participate scoreItems={whitelistItems} />
-                <Supershare scoreItems={superShareItems} />
-                <GoldListRegister />
+                <Participate
+                    scoreItems={whitelistItems}
+                    onSelect={onSelectWhitelist}
+                />
+                <Supershare
+                    scoreItems={superShareItems}
+                    onSelect={onSelectSupershare}
+                />
+                <GoldListRegister onSubmit={onSubmitGoldListForm} />
             </Container>
+
+            <AuthModal
+                isOpen={isModalLoginOpen}
+                onClose={() => setModalLoginOpen(false)}
+                onBackdropClick={() => setModalLoginOpen(false)}
+            />
         </>
     )
 }

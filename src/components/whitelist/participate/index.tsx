@@ -35,7 +35,7 @@ const Participate: React.FC<ParticipateProps> = props => {
                 separatorClass="mb-5"
                 titleClass="mb-5 items-start"
             >
-                <ScoreGrid items={props.scoreItems} />
+                <ScoreGrid items={props.scoreItems} onSelect={props.onSelect} />
             </AppSection>
         </Container>
     )
