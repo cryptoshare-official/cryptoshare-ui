@@ -10,7 +10,12 @@ const pt = {
     openingGoldList: `Abertura da lista gold`,
     registerYourEmail: `Cadastre seu e-mail para registrar interesse`,
     registerInterest: `Registrar Interesse`,
-    wantToBeSupershare: `Quero ser supershare`
+    wantToBeSupershare: `Quero ser supershare`,
+    ourMission: `Nossa missão é democratizar investimentos antes inalcançáveis!`,
+    democratizingIsListening: `Democratizar é ouvir a comunidade e todos os investidores terem voz ativa nas decisões!`,
+    benefitsSuperShare: `Seja um Super Share e tenha vantagens exclusivas para sempre!`,
+    diversifyYourInvestments: `Diversifique seus investimentos de maneira simples e segura!`,
+    joinTheWhitelist: `Participar da Whitelist`
 }
 
 export default pt

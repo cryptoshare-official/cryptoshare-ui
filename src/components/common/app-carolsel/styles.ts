@@ -15,7 +15,7 @@ export const Content = styled.article`
 `
 
 export const ControlsContainer = styled.div`
-    ${tw`flex items-center`}
+    ${tw`flex items-center relative bottom-12 sm:bottom-8`}
 `
 
 export const Dot = styled.button`
@@ -28,4 +28,15 @@ export const Dot = styled.button`
         width: 15px;
         height: 15px;
     }
+
+    &:first-child {
+        margin-left: 0px;
+    }
+`
+
+export const Prev = styled(Dot)`
+    ${tw`absolute mx-0`}
+
+    width: 48px;
+    height: 48px;
 `
