@@ -2,17 +2,17 @@ import { ScoreInterface } from '@/interfaces/whitelist.interface'
 
 export interface SupershareProps {
     scoreItems: ScoreInterface[]
-    onSelect: () => void
+    onSelect: (item: ScoreInterface) => void
 }
 
 export interface ParticipateProps {
     scoreItems: ScoreInterface[]
-    onSelect: () => void
+    onSelect: (item: ScoreInterface) => void
 }
 
 export interface ScoreGridProps {
     items: ScoreInterface[]
-    onSelect: () => void
+    onSelect: (item: ScoreInterface) => void
 }
 
 export interface GoldListRegisterProps {
