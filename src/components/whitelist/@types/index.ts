@@ -16,5 +16,5 @@ export interface ScoreGridProps {
 }
 
 export interface GoldListRegisterProps {
-    onSubmit?: () => void
+    onSubmit?: (data: { email: string }) => void
 }
