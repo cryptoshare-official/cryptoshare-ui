@@ -85,7 +85,7 @@ const Header: React.FC = () => {
     return (
         <Nav id="navHeader">
             <Container>
-                <LogoContainer>
+                <LogoContainer onClick={() => onClickLink(links[0])}>
                     <img src={Logo} alt="Crypto Share" />
                 </LogoContainer>
 

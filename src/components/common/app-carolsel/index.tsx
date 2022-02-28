@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { useSwipeable } from 'react-swipeable'
 import {
     Dot,
-    Prev,
     Content,
     Container,
     ControlsContainer,

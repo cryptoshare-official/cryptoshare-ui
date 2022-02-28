@@ -12,12 +12,7 @@ const en: WhitelistTranslateType = {
     openingGoldList: `Opening the gold list`,
     registerYourEmail: `Register your email to register interest`,
     registerInterest: `register interest`,
-    wantToBeSupershare: `I want to be supershare`,
-    ourMission: `Our mission is to democratize previously unattainable investments!`,
-    democratizingIsListening: `Democratizing is listening to the community and all investors having a voice in decisions!`,
-    benefitsSuperShare: `Become a Super Share and enjoy exclusive benefits forever!`,
-    diversifyYourInvestments: `Diversify your investments in a simple and safe way!`,
-    joinTheWhitelist: `Join the Whitelist`
+    wantToBeSupershare: `I want to be supershare`
 }
 
 export default en

@@ -48,3 +48,5 @@ export const CardTitle = styled.h4`
 export const CardDescription = styled.p`
     ${tw`mt-6 text-base`}
 `
+
+export const Icon = styled.img``

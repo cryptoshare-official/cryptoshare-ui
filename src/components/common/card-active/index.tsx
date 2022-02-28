@@ -10,7 +10,7 @@ interface CardActiveProps {
 const CardActive: React.FC<CardActiveProps> = props => {
     return (
         <Container>
-            <Icon>{props.icon}</Icon>
+            <Icon src={props.icon} />
 
             <Title>{props.title}</Title>
             <Separator />

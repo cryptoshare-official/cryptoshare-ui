@@ -1,35 +1,41 @@
 import React from 'react'
+import locale from '@/locales/pages/home'
+import { HomeTranslateType } from '@/locales/types'
+import { useTranslate } from '@/hooks/translate.hook'
+import Leaf from '@/assets/images/home/icons/leaf.png'
+import Puzzle from '@/assets/images/home/icons/puzzle.png'
+import Octagon from '@/assets/images/home/icons/octagon.png'
 import {
-    Container,
-    Content,
-    Title,
-    Separator,
-    Grid,
     Card,
-    CardHeader,
+    Grid,
+    Icon,
+    Title,
+    Content,
+    Separator,
+    Container,
     CardTitle,
+    CardHeader,
     CardDescription
 } from './styles'
 
 const Meet: React.FC = () => {
+    const translate = useTranslate<HomeTranslateType>(locale)
+
     const items = [
         {
-            icon: 'icone',
-            title: 'Proposito',
-            description:
-                'A Crypto Share nasce em um momento de expansão da web3.0 e com toda tecnologia baseada em confiança que essa revolução nos proporciona, agora temos como democratizar investimentos antes inalcançáveis para a grande maioria dos investidores.'
+            icon: Leaf,
+            title: translate.purposeTitle,
+            description: translate.purposeDescription
         },
         {
-            icon: 'icone',
-            title: 'Missão',
-            description:
-                'Democratizar os investimentos para que investidores com qualquer tamanho de capital possa participar de projetos maiores mesmo sem ter estrutura, conhecimento e dinheiro suficiente para esses projetos.'
+            icon: Octagon,
+            title: translate.missionTitle,
+            description: translate.missionDescription
         },
         {
-            icon: 'icone',
-            title: 'Visão e Valores',
-            description:
-                'Ser conhecida como a principal plataforma de investimento democratizado na web3.0 e atingir esse objetivo baseados em nossos três pilares: transparência, integridade e democratização.'
+            icon: Puzzle,
+            title: translate.visionAndValuesTitle,
+            description: translate.visionAndValuesDescription
         }
     ]
 
@@ -38,14 +44,14 @@ const Meet: React.FC = () => {
             <Content>
                 <Title>
                     <Separator />
-                    Conheça a Cryptoshare
+                    {translate.getToKnowCryptoshare}
                 </Title>
 
                 <Grid>
                     {items.map(({ icon, title, description }, index) => (
                         <Card key={index}>
                             <CardHeader>
-                                {icon}
+                                <Icon src={icon} />
                                 <Separator />
                             </CardHeader>
 

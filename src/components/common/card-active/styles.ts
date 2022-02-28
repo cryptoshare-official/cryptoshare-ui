@@ -9,7 +9,7 @@ export const Container = styled.article`
     box-shadow: 0px 0px 16px rgba(173, 180, 180, 0.24);
 `
 
-export const Icon = styled.i``
+export const Icon = styled.img``
 
 export const Title = styled.h3`
     ${tw`text-lg font-bold mt-4`}

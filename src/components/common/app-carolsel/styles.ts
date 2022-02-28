@@ -33,10 +33,3 @@ export const Dot = styled.button`
         margin-left: 0px;
     }
 `
-
-export const Prev = styled(Dot)`
-    ${tw`absolute mx-0`}
-
-    width: 48px;
-    height: 48px;
-`

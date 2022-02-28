@@ -1,7 +1,8 @@
 import React from 'react'
-import locale from '@/locales/pages/whitelist'
+import { useRouter } from 'next/router'
+import locale from '@/locales/pages/home'
 import { useTranslate } from '@/hooks/translate.hook'
-import { WhitelistTranslateType } from '@/locales/types'
+import { HomeTranslateType } from '@/locales/types'
 import ImageOne from '@/assets/images/home/bg-home-1.png'
 import ImageTwo from '@/assets/images/home/bg-home-2.png'
 import ImageThree from '@/assets/images/home/bg-home-3.png'
@@ -10,7 +11,8 @@ import { Container, Content, Image, Title, Button, Div } from './styles'
 import AppCarousel, { CarouselItem } from '@/components/common/app-carolsel'
 
 const CarouselSlider: React.FC = () => {
-    const translate = useTranslate<WhitelistTranslateType>(locale)
+    const router = useRouter()
+    const translate = useTranslate<HomeTranslateType>(locale)
 
     const slides = [
         { text: translate.ourMission, image: ImageOne },
@@ -29,7 +31,11 @@ const CarouselSlider: React.FC = () => {
 
                             <Div>
                                 <Title>{item.text}</Title>
-                                <Button>{translate.joinTheWhitelist}</Button>
+                                <Button
+                                    onClick={() => router.push('/whitelist')}
+                                >
+                                    {translate.joinTheWhitelist}
+                                </Button>
                             </Div>
                         </Content>
                     </CarouselItem>
