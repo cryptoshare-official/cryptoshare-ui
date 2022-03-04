@@ -126,7 +126,7 @@ const Header: React.FC = () => {
                             {translate.access} Whitepaper
                         </Button>
 
-                        <LanguageDropdown />
+                        <LanguageDropdown onChange={() => toggleMenu()} />
                     </ResponsiveOptionsGroup>
                 </ResponsiveContainer>
             )}

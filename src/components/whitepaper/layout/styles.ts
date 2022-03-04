@@ -1,0 +1,17 @@
+import { AppContainer } from '@/styles/css/components'
+import styled from 'styled-components'
+import tw from 'twin.macro'
+
+export const Container = styled(AppContainer)`
+    background: #fafafa;
+    min-height: 100%;
+    ${tw`flex pb-8`}
+`
+
+export const Main = styled.main`
+    ${tw`ml-8 py-6 px-8`}
+    flex: 1;
+    background: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0px 4px 16px rgba(173, 180, 180, 0.24);
+`

@@ -12,8 +12,9 @@ import { Container, Button, OptionContainer, Option } from './styles'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import { LanguageDropdownInterface } from './@types'
 
-const LanguageDropdown: React.FC = () => {
+const LanguageDropdown: React.FC<LanguageDropdownInterface> = props => {
     const [isOpen, setIsOpen] = useState(false)
     const { currentLanguage } = useMapState(
         'language'
@@ -33,6 +34,8 @@ const LanguageDropdown: React.FC = () => {
     const onChangeLanguage = (language: string) => {
         setLanguage(language)
         toggle()
+
+        if (props.onChange) props.onChange()
     }
 
     return (

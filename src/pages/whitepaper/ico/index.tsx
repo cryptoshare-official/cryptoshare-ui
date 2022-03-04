@@ -2,13 +2,13 @@ import React from 'react'
 import AppHead from '@/components/common/app-head'
 import { Container } from '@/styles/pages/whitepaper'
 
-const Whitepaper: React.FC = () => {
+const WhitepaperICO: React.FC = () => {
     return (
         <>
-            <AppHead title="Whitepaper" />
-            <Container>Bem vindo a CryptoShare</Container>
+            <AppHead title="Whitepaper - ICO" />
+            <Container>WhitepaperICO</Container>
         </>
     )
 }
 
-export default Whitepaper
+export default WhitepaperICO
