@@ -14,8 +14,8 @@ import {
     Input,
     Span,
     Button,
-    Container,
-    FormGroup
+    FormGroup,
+    Container
 } from './styles'
 
 const GoldListRegister: React.FC<GoldListRegisterProps> = props => {
