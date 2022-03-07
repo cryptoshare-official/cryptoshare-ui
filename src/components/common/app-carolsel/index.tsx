@@ -15,6 +15,8 @@ interface AppCarouselProps {
     controlContainerClass?: string
 }
 
+type ChildType = React.DetailedReactHTMLElement<any, HTMLElement>
+
 export const CarouselItem: React.FC = ({ children }) => {
     return <CarolselItemContainer>{children}</CarolselItemContainer>
 }
@@ -59,7 +61,9 @@ const AppCarousel: React.FC<AppCarouselProps> = props => {
             onMouseLeave={() => (pauseOnHover ? setPaused(false) : null)}
         >
             <Content style={styleContent}>
-                {Children.map(children, (child: any) => cloneElement(child))}
+                {Children.map(children, child =>
+                    cloneElement(child as ChildType)
+                )}
             </Content>
 
             <ControlsContainer className={props.controlContainerClass}>

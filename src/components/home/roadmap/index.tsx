@@ -18,7 +18,7 @@ const Roadmap: React.FC = () => {
         'language'
     ) as LanguageStateInterface
 
-    const buildDate = (month: number, year: number = 2022) => {
+    const buildDate = (month: number, year = 2022) => {
         const dateLocaleDisct = {
             [LanguageTypes.pt]: ptBR,
             [LanguageTypes.en]: enUS,
