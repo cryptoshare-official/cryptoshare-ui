@@ -14,8 +14,17 @@ const pt = {
     lottery: 'Loteria',
     technology: 'Tecnologia',
     marketplace: 'Marketplace',
+
+    // economy
     economy: 'Economia',
-    communication: 'Comunicação'
+    cryptocurrencies: 'Criptomoedas',
+    members: 'Membros',
+    icoProgram: 'Programa ICO',
+    idoProgram: 'Programa IDO',
+    financialOperations: 'Operações Financeiras',
+
+    communication: 'Comunicação',
+    philanthropy: 'Filantropia'
 }
 
 export default pt

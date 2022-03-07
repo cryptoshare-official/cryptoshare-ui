@@ -1,16 +1,16 @@
 import React from 'react'
 import { format } from 'date-fns'
 import { useMapState } from '@/hooks'
-import RoadmapItem from './roadmap-item'
+import RoadmapItems from './roadmap-items'
 import locale from '@/locales/pages/home'
 import { ptBR, enUS, es } from 'date-fns/locale'
 import { HomeTranslateType } from '@/locales/types'
 import { LanguageTypes } from '@/enums/language.enum'
 import { useTranslate } from '@/hooks/translate.hook'
 import AppSection from '@/components/common/app-section'
+import { Subtitle, Container, RoadmapSeparator } from './styles'
 import { RoadmapItemInterface } from '@/components/home/roadmap/@types'
 import { LanguageStateInterface } from '@/store/interfaces/languageState.interface'
-import { Subtitle, Container, RoadmapSeparator } from './styles'
 
 const Roadmap: React.FC = () => {
     const translate = useTranslate<HomeTranslateType>(locale)
@@ -110,9 +110,9 @@ const Roadmap: React.FC = () => {
             <AppSection title="Roadmap">
                 <Subtitle>{translate.titleRoadmap}</Subtitle>
 
-                <RoadmapItem items={completedItems} isCompleted={true} />
+                <RoadmapItems items={completedItems} isCompleted={true} />
                 <RoadmapSeparator>Upcomming</RoadmapSeparator>
-                <RoadmapItem items={nextItems} isCompleted={false} />
+                <RoadmapItems items={nextItems} isCompleted={false} />
 
                 <Subtitle>{translate.subtitleRoadmap}</Subtitle>
             </AppSection>

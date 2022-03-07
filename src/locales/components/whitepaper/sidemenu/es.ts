@@ -16,8 +16,17 @@ const es: WhitepaperSideMenuTranslateType = {
     lottery: 'Lotería',
     technology: 'Tecnología',
     marketplace: 'Mercado',
+
+    // economy
     economy: 'Economía',
-    communication: 'Comunicación'
+    cryptocurrencies: 'Criptomonedas',
+    members: 'Miembros',
+    icoProgram: 'Programa ICO',
+    idoProgram: 'Programa IDO',
+    financialOperations: 'Operaciones Financieras',
+
+    communication: 'Comunicación',
+    philanthropy: 'Filantropia'
 }
 
 export default es

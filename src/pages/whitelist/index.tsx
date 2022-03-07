@@ -12,12 +12,15 @@ import { Container } from '@/styles/pages/whitelist'
 import AuthModal from '@/components/common/auth-modal'
 import Supershare from '@/components/whitelist/supershare'
 import Participate from '@/components/whitelist/participate'
+import { WhitelistService } from '@/services/whitelist.service'
 import { ScoreInterface } from '@/interfaces/whitelist.interface'
 import AboutWhitelist from '@/components/whitelist/about-whitelist'
 import GoldListRegister from '@/components/whitelist/gold-list-register'
 
 const WhiteList: React.FC = () => {
     const [isModalLoginOpen, setModalLoginOpen] = useState(false)
+    const whitelistService = new WhitelistService()
+
     const whitelistItems: ScoreInterface[] = [
         {
             id: 1,
@@ -80,7 +83,7 @@ const WhiteList: React.FC = () => {
     ]
 
     const onSubmitGoldListForm = (data: { email: string }) => {
-        console.log('DATA :', data)
+        whitelistService.sendEmail(data.email)
     }
 
     const onSelectWhitelist = (item: ScoreInterface) => {

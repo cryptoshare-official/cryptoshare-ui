@@ -10,11 +10,18 @@ import {
     SubContainer
 } from './styles'
 import { useRouter } from 'next/router'
+
+import { BsCoin } from 'react-icons/bs'
 import { AiFillSound } from 'react-icons/ai'
-import { BiDiamond, BiStar } from 'react-icons/bi'
 import { GiDeathStar, GiTakeMyMoney } from 'react-icons/gi'
-import { FaChevronRight, FaHeartbeat } from 'react-icons/fa'
+import { BiDiamond, BiStar, BiTransferAlt } from 'react-icons/bi'
 import { MdDeviceHub, MdSettings, MdStore } from 'react-icons/md'
+import {
+    FaChevronRight,
+    FaHandsHelping,
+    FaHeartbeat,
+    FaUsers
+} from 'react-icons/fa'
 
 import { useTranslate } from '@/hooks/translate.hook'
 import locale from '@/locales/components/whitepaper/sidemenu'
@@ -30,12 +37,6 @@ const SideMenu: React.FC = () => {
             icon: <BiDiamond />,
             name: translate.purpose,
             route: 'purpose',
-            subItems: []
-        },
-        {
-            icon: <GiDeathStar />,
-            name: translate.programICO,
-            route: 'ico',
             subItems: []
         },
         {
@@ -97,13 +98,45 @@ const SideMenu: React.FC = () => {
         {
             icon: <FaHeartbeat />,
             name: translate.economy,
-            route: 'economy',
-            subItems: []
+            route: '',
+            subItems: [
+                {
+                    icon: <BsCoin />,
+                    name: translate.cryptocurrencies,
+                    route: 'economy/cryptocurrencies'
+                },
+                {
+                    icon: <FaUsers />,
+                    name: translate.members,
+                    route: 'economy/members'
+                },
+                {
+                    icon: <GiDeathStar />,
+                    name: translate.icoProgram,
+                    route: 'economy/ico-program'
+                },
+                {
+                    icon: <GiDeathStar />,
+                    name: translate.idoProgram,
+                    route: 'economy/ido-program'
+                },
+                {
+                    icon: <BiTransferAlt />,
+                    name: translate.financialOperations,
+                    route: 'economy/financial-operations'
+                }
+            ]
         },
         {
             icon: <AiFillSound />,
             name: translate.communication,
             route: 'communication',
+            subItems: []
+        },
+        {
+            icon: <FaHandsHelping />,
+            name: translate.philanthropy,
+            route: 'philanthropy',
             subItems: []
         }
     ]

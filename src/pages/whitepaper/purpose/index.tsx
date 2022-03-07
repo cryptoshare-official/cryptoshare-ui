@@ -1,13 +1,24 @@
 import React from 'react'
 import AppHead from '@/components/common/app-head'
 import { Container } from '@/styles/pages/whitepaper'
+import { useTranslate } from '@/hooks/translate.hook'
+import locale from '@/locales/pages/whitepaper/purpose'
+import { WhitepaperTranslateType } from '@/locales/types'
+import WhitepaperContent from '@/components/whitepaper/whitepaper-content'
 
 const Purpose: React.FC = () => {
+    const translate = useTranslate<WhitepaperTranslateType>(locale)
+
     return (
-        <Container>
-            <AppHead title="Proposito" />
-            <h5>Proposito</h5>
-        </Container>
+        <>
+            <AppHead title="Whitepaper" />
+            <Container>
+                <WhitepaperContent
+                    title={translate.title}
+                    content={translate.content}
+                />
+            </Container>
+        </>
     )
 }
 

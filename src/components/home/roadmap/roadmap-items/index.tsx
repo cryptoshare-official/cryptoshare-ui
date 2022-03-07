@@ -2,12 +2,12 @@ import React from 'react'
 import { Article, Item, ItemDate, ItemLabel } from './styles'
 import { RoadmapItemInterface } from '@/components/home/roadmap/@types'
 
-interface RoadmapItemProps {
+interface RoadmapItemsProps {
     items: RoadmapItemInterface[]
     isCompleted: boolean
 }
 
-const RoadmapItem: React.FC<RoadmapItemProps> = ({ items, isCompleted }) => {
+const RoadmapItems: React.FC<RoadmapItemsProps> = ({ items, isCompleted }) => {
     return (
         <Article>
             {items.map(({ date, description }, index) => (
@@ -20,4 +20,4 @@ const RoadmapItem: React.FC<RoadmapItemProps> = ({ items, isCompleted }) => {
     )
 }
 
-export default RoadmapItem
+export default RoadmapItems
