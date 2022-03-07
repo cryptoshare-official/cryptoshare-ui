@@ -1,7 +1,7 @@
 import { HeaderTranslateType } from '@/locales/types'
 
 const en: HeaderTranslateType = {
-    active: 'Active',
+    assets: 'Assets',
     meet: 'Meet',
     access: 'Access'
 }

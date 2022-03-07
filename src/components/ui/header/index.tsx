@@ -29,7 +29,7 @@ const Header: React.FC = () => {
 
     const links: HeaderInterface[] = [
         { name: 'Home', path: '/', scrollTo: '' },
-        { name: translate.active, path: '', scrollTo: 'assets' },
+        { name: translate.assets, path: '', scrollTo: 'assets' },
         { name: translate.meet, path: '', scrollTo: 'meet' },
         { name: 'Roadmap', path: '', scrollTo: 'roadmap' }
     ]

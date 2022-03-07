@@ -2,7 +2,7 @@ import React from 'react'
 import locale from '@/locales/pages/home'
 import { HomeTranslateType } from '@/locales/types'
 import { useTranslate } from '@/hooks/translate.hook'
-import CardActive from '@/components/common/card-active'
+import CardAssets from '@/components/common/card-assets'
 import { Container, Title, Separator, AssetsGrid } from './styles'
 
 import Building from '@/assets/images/home/icons/building.png'
@@ -13,7 +13,7 @@ import Wallet from '@/assets/images/home/icons/wallet.png'
 const OurAssets: React.FC = () => {
     const translate = useTranslate<HomeTranslateType>(locale)
 
-    const actives = [
+    const assets = [
         {
             icon: Building,
             title: translate.propertiesTitle,
@@ -44,8 +44,8 @@ const OurAssets: React.FC = () => {
             </Title>
 
             <AssetsGrid>
-                {actives.map((item, index) => (
-                    <CardActive
+                {assets.map((item, index) => (
+                    <CardAssets
                         key={index}
                         icon={item.icon}
                         title={item.title}

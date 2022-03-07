@@ -1,5 +1,5 @@
 const pt = {
-    active: 'Ativo',
+    assets: 'Ativo',
     meet: 'Conheça',
     access: 'Acessar'
 }

@@ -1,13 +1,13 @@
 import React from 'react'
 import { Container, Separator, Title, Text, Icon } from './styles'
 
-interface CardActiveProps {
+interface CardAssetsProps {
     icon: string
     title: string
     description: string
 }
 
-const CardActive: React.FC<CardActiveProps> = props => {
+const CardAssets: React.FC<CardAssetsProps> = props => {
     return (
         <Container>
             <Icon src={props.icon} />
@@ -19,4 +19,4 @@ const CardActive: React.FC<CardActiveProps> = props => {
     )
 }
 
-export default CardActive
+export default CardAssets

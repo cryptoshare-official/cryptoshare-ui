@@ -1,101 +1,120 @@
-import AppSection from '@/components/common/app-section'
 import React from 'react'
-
-import {
-    Container,
-    Subtitle,
-    Article,
-    Item,
-    ItemDate,
-    ItemLabel,
-    RoadmapSeparator
-} from './styles'
+import { format } from 'date-fns'
+import { useMapState } from '@/hooks'
+import RoadmapItem from './roadmap-item'
+import locale from '@/locales/pages/home'
+import { ptBR, enUS, es } from 'date-fns/locale'
+import { HomeTranslateType } from '@/locales/types'
+import { LanguageTypes } from '@/enums/language.enum'
+import { useTranslate } from '@/hooks/translate.hook'
+import AppSection from '@/components/common/app-section'
+import { RoadmapItemInterface } from '@/components/home/roadmap/@types'
+import { LanguageStateInterface } from '@/store/interfaces/languageState.interface'
+import { Subtitle, Container, RoadmapSeparator } from './styles'
 
 const Roadmap: React.FC = () => {
-    const completedItems = [
-        { date: 'outubro 2021', description: 'Idealização do Projeto' },
-        { date: 'novembro 2021', description: 'Formação da Equipe' },
+    const translate = useTranslate<HomeTranslateType>(locale)
+    const { currentLanguage } = useMapState(
+        'language'
+    ) as LanguageStateInterface
+
+    const buildDate = (month: number, year: number = 2022) => {
+        const dateLocaleDisct = {
+            [LanguageTypes.pt]: ptBR,
+            [LanguageTypes.en]: enUS,
+            [LanguageTypes.es]: es
+        }
+
+        const date = new Date(year, month - 1, 1)
+        const locale = dateLocaleDisct[currentLanguage]
+
+        return format(date, 'LLLL yyyy', { locale })
+    }
+
+    const completedItems: RoadmapItemInterface[] = [
         {
-            date: 'novembro 2021',
-            description: 'Processo de Descoberta de Produto;'
+            date: buildDate(10, 2021),
+            description: translate.projectIdealization
         },
         {
-            date: 'dezembro 2021',
-            description: 'Prototipação de Alta-Fidelidade'
+            date: buildDate(11, 2021),
+            description: translate.teamBuilding
         },
         {
-            date: 'fevereiro 2022',
-            description: 'Lançamento do Site e Abertura WhiteList'
+            date: buildDate(11, 2021),
+            description: translate.productDiscoveryProcess
+        },
+        {
+            date: buildDate(12, 2021),
+            description: translate.highFidelityPrototyping
+        },
+        {
+            date: buildDate(2),
+            description: translate.websiteLaunchAndWhiteListOpening
         }
     ]
 
-    const nextItems = [
+    const nextItems: RoadmapItemInterface[] = [
         {
-            date: 'março 2022',
-            description: 'Abertura ICO e NFT WhiteList Gold'
+            date: buildDate(3),
+            description: translate.openingGold
         },
         {
-            date: 'abril 2022',
-            description: 'Abertura ICO e NFT WhiteList Silver'
+            date: buildDate(4),
+            description: translate.openingSilver
         },
         {
-            date: 'abril 2022',
-            description: 'Abertura ICO e NFT WhiteList Bronze'
-        },
-        { date: 'maio 2022', description: 'Abertura ICO e NFT Pública' },
-        { date: 'maio 2022', description: 'Loteria Diária' },
-        { date: 'maio 2022', description: 'Abertura do Marketplace' },
-        {
-            date: 'junho 2022',
-            description: 'Lançamento do Crypto Ativo Startup'
+            date: buildDate(4),
+            description: translate.openingBronze
         },
         {
-            date: 'junho 2022',
-            description: 'Lançamento do Crypto Ativo Imóvel'
+            date: buildDate(5),
+            description: translate.openingNFT
         },
         {
-            date: 'junho 2022',
-            description: 'Lançamento do Crypto Ativo Franquia'
+            date: buildDate(5),
+            description: translate.dailyLottery
         },
-        { date: 'junho 2022', description: 'Abertura de Parcerias Externas' },
-        { date: 'julho 2022', description: 'Vendas Internas' },
-        { date: 'julho 2022', description: 'Rede Solana' }
+        {
+            date: buildDate(5),
+            description: translate.marketplaceOpening
+        },
+        {
+            date: buildDate(6),
+            description: translate.cryptoAssetStartupLaunch
+        },
+        {
+            date: buildDate(6),
+            description: translate.cryptoAssetPropertyLaunch
+        },
+        {
+            date: buildDate(6),
+            description: translate.cryptoAssetFranchiseLaunch
+        },
+        {
+            date: buildDate(6),
+            description: translate.openingExternalPartnerships
+        },
+        {
+            date: buildDate(7),
+            description: translate.internalSales
+        },
+        {
+            date: buildDate(7),
+            description: translate.solanaNetwork
+        }
     ]
 
     return (
         <Container id="roadmap">
             <AppSection title="Roadmap">
-                <Subtitle>
-                    Com base na evolução dos negócios do grupo Crypto Share, o
-                    projeto de democratização dos investimentos na web3.0 tem
-                    sua primeira fase estruturada com os eventos listados
-                    abaixo:
-                </Subtitle>
+                <Subtitle>{translate.titleRoadmap}</Subtitle>
 
-                <Article>
-                    {completedItems.map(({ date, description }, index) => (
-                        <Item key={index} className="completed">
-                            <ItemDate>{date}</ItemDate>
-                            <ItemLabel>{description}</ItemLabel>
-                        </Item>
-                    ))}
-                </Article>
-
+                <RoadmapItem items={completedItems} isCompleted={true} />
                 <RoadmapSeparator>Upcomming</RoadmapSeparator>
+                <RoadmapItem items={nextItems} isCompleted={false} />
 
-                <Article>
-                    {nextItems.map(({ date, description }, index) => (
-                        <Item key={index}>
-                            <ItemDate>{date}</ItemDate>
-                            <ItemLabel>{description}</ItemLabel>
-                        </Item>
-                    ))}
-                </Article>
-
-                <Subtitle>
-                    Mais Ativos e Parcerias em evolução contínua de acordo com
-                    as decisões da comunidade
-                </Subtitle>
+                <Subtitle>{translate.subtitleRoadmap}</Subtitle>
             </AppSection>
         </Container>
     )

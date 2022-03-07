@@ -9,7 +9,7 @@ const en: HomeTranslateType = {
     joinTheWhitelist: `Join the Whitelist`,
 
     //Assets
-    ourAssets: 'Discover our actives',
+    ourAssets: 'Discover our assets',
     propertiesTitle: `Crypto Properties`,
     startupsTitle: `Crypto Startups`,
     franchiseTitle: `Crypto Franchise`,
@@ -29,7 +29,29 @@ const en: HomeTranslateType = {
     visionAndValuesTitle: `Vision And Values`,
     purposeDescription: `Crypto Share was born at a time of web3.0 expansion and with all the technology based on trust that this revolution provides us, we now have the means to democratize investments that were previously unattainable for the vast majority of investors.`,
     missionDescription: `Democratize investments so that investors with any size of capital can participate in larger projects even without having enough structure, knowledge and money for these projects.`,
-    visionAndValuesDescription: `To be known as the leading democratized investment platform on web3.0 and to achieve this objective based on our three pillars: transparency, integrity and democratization.`
+    visionAndValuesDescription: `To be known as the leading democratized investment platform on web3.0 and to achieve this objective based on our three pillars: transparency, integrity and democratization.`,
+
+    //RoadMap
+    titleRoadmap: `Based on the evolution of crypto share group's business, the project to democratize investments in web3.0 has its first phase structured with the events listed below:`,
+    subtitleRoadmap: `More Assets and ContinuousLy Evolving Partnerships according to community decisions`,
+    projectIdealization: `Project Idealization`,
+    teamBuilding: `Team Building`,
+    productDiscoveryProcess: `Product Discovery Process`,
+    highFidelityPrototyping: `High Fidelity Prototyping`,
+    websiteLaunchAndWhiteListOpening: `Website Launch and WhiteList Opening`,
+
+    openingGold: `ICO and NFT WhiteList Gold Openning`,
+    openingSilver: `ICO and NFT WhiteList Silver Opening`,
+    openingBronze: `ICO and NFT WhiteList Bronze Opening`,
+    openingNFT: `ICO and Public NFT Opening`,
+    dailyLottery: `Daily Lottery`,
+    marketplaceOpening: `Marketplace Opening`,
+    cryptoAssetStartupLaunch: `Crypto Asset Startup Launch`,
+    cryptoAssetPropertyLaunch: `Crypto Asset Property Launch`,
+    cryptoAssetFranchiseLaunch: `Crypto Asset Franchise Launch`,
+    openingExternalPartnerships: `Opening External Partnerships`,
+    internalSales: `Internal Sales`,
+    solanaNetwork: `Solana Network`
 }
 
 export default en
