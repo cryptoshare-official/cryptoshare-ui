@@ -23,7 +23,6 @@ const pt = {
     idoProgram: 'Programa IDO',
     financialOperations: 'Operações Financeiras',
 
-    communication: 'Comunicação',
     philanthropy: 'Filantropia'
 }
 

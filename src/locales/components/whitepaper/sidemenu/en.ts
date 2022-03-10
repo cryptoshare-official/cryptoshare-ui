@@ -25,7 +25,6 @@ const en: WhitepaperSideMenuTranslateType = {
     idoProgram: 'IDO Program',
     financialOperations: 'Financial Operations',
 
-    communication: 'Communication',
     philanthropy: 'Philanthropy'
 }
 

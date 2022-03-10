@@ -12,7 +12,6 @@ import {
 import { useRouter } from 'next/router'
 
 import { BsCoin } from 'react-icons/bs'
-import { AiFillSound } from 'react-icons/ai'
 import { GiDeathStar, GiTakeMyMoney } from 'react-icons/gi'
 import { BiDiamond, BiStar, BiTransferAlt } from 'react-icons/bi'
 import { MdDeviceHub, MdSettings, MdStore } from 'react-icons/md'
@@ -126,12 +125,6 @@ const SideMenu: React.FC = () => {
                     route: 'economy/financial-operations'
                 }
             ]
-        },
-        {
-            icon: <AiFillSound />,
-            name: translate.communication,
-            route: 'communication',
-            subItems: []
         },
         {
             icon: <FaHandsHelping />,
