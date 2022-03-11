@@ -32,7 +32,7 @@ export const Separator = styled(AppSeparator)`
     width: 40px;
 `
 export const Title = styled.h3`
-    ${tw`flex px-6 mb-6 items-center justify-between text-lg font-bold`}
+    ${tw`flex px-6 mb-6 cursor-pointer items-center justify-between text-lg font-bold`}
     color: ${props => props.theme.colors.gray};
 `
 

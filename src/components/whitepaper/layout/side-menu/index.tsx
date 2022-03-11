@@ -168,7 +168,7 @@ const SideMenu: React.FC = () => {
 
     return (
         <Container id="sideMenu">
-            <Title>
+            <Title onClick={() => router.push(`/whitepaper`)}>
                 Whitepaper
                 <Separator />
             </Title>
