@@ -22,7 +22,7 @@ export const Container = styled(AppContainer)`
 `
 
 export const LogoContainer = styled.figure`
-    ${tw`mr-4 py-1`}
+    ${tw`mr-4 py-1 cursor-pointer`}
 `
 
 export const LinkGroup = styled.article`

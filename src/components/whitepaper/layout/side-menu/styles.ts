@@ -1,13 +1,39 @@
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import tw from 'twin.macro'
+import { AppSeparator } from '@/styles/css/components'
 
 export const Container = styled.aside`
-    ${tw`py-6 w-1/4`}
-    height: auto;
+    ${tw`py-6 w-1/4 sticky overflow-y-auto`}
+    max-height: 84vh;
     background: #ffffff;
     border-radius: 4px;
     box-shadow: 0px 0px 16px rgba(173, 180, 180, 0.24);
+    top: ${props => props.theme.variables.paddingTopContainer};
+
+    ::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: ${props => props.theme.colors.gradient};
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: ${props => props.theme.colors.primary};
+    }
+`
+
+export const Separator = styled(AppSeparator)`
+    width: 40px;
+`
+export const Title = styled.h3`
+    ${tw`flex px-6 mb-6 items-center justify-between text-lg font-bold`}
+    color: ${props => props.theme.colors.gray};
 `
 
 export const Group = styled.ul``

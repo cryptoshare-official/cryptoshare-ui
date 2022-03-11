@@ -3,16 +3,17 @@ import {
     Icon,
     Item,
     Group,
+    Title,
     SubItem,
     SubGroup,
     Container,
+    Separator,
     GroupTitle,
     SubContainer
 } from './styles'
 import { useRouter } from 'next/router'
 
 import { BsCoin } from 'react-icons/bs'
-import { AiFillSound } from 'react-icons/ai'
 import { GiDeathStar, GiTakeMyMoney } from 'react-icons/gi'
 import { BiDiamond, BiStar, BiTransferAlt } from 'react-icons/bi'
 import { MdDeviceHub, MdSettings, MdStore } from 'react-icons/md'
@@ -128,12 +129,6 @@ const SideMenu: React.FC = () => {
             ]
         },
         {
-            icon: <AiFillSound />,
-            name: translate.communication,
-            route: 'communication',
-            subItems: []
-        },
-        {
             icon: <FaHandsHelping />,
             name: translate.philanthropy,
             route: 'philanthropy',
@@ -173,6 +168,11 @@ const SideMenu: React.FC = () => {
 
     return (
         <Container id="sideMenu">
+            <Title>
+                Whitepaper
+                <Separator />
+            </Title>
+
             <Group>
                 {items.map((item, index) => {
                     const simpleItem = (

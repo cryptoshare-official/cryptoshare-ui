@@ -19,7 +19,7 @@ const lightMode = {
     variables: variablesCSS,
     colors: {
         text: '#111827',
-        background: '#ffffff',
+        background: '#fafafa',
         gray: variablesCSS.gray,
         blue: variablesCSS.blue,
         gray_1: variablesCSS.gray_1,

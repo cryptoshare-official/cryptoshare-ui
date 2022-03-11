@@ -2,15 +2,21 @@ import tw from 'twin.macro'
 import styled from 'styled-components'
 import { AppContainer, AppButton } from '@/styles/css/components/index'
 
+export const BackgroundContainer = styled.section`
+    background: radial-gradient(circle, #c7c7c7 16%, #e3e3e3 78%);
+`
+
 export const Container = styled(AppContainer)`
     ${tw`sm:w-full px-0`}
     padding-top: 0px;
 `
 
-export const Image = styled.img``
+export const Image = styled.img`
+    ${tw`relative top-5`}
+`
 
 export const Content = styled.article`
-    ${tw`w-full`}
+    ${tw`w-full h-full`}
 `
 
 export const Div = styled.div`
