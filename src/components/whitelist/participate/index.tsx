@@ -34,6 +34,7 @@ const Participate: React.FC<ParticipateProps> = props => {
                 title={customTitle}
                 separatorClass="mb-5"
                 titleClass="mb-5 items-start"
+                contentClass="opacity-50 pointer-events-none"
             >
                 <ScoreGrid items={props.scoreItems} onSelect={props.onSelect} />
             </AppSection>

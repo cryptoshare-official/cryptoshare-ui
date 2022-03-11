@@ -21,7 +21,10 @@ import {
 const GoldListRegister: React.FC<GoldListRegisterProps> = props => {
     const translate = useTranslate<WhitelistTranslateType>(locales)
     const emailForm = yup.object().shape({
-        email: yup.string().email('Email invalido').required('Insira um email.')
+        email: yup
+            .string()
+            .email(translate.invalidEmail)
+            .required(translate.enterAnEmail)
     })
 
     const {

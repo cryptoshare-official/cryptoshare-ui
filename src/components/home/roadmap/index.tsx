@@ -49,14 +49,14 @@ const Roadmap: React.FC = () => {
             description: translate.highFidelityPrototyping
         },
         {
-            date: buildDate(2),
+            date: buildDate(3),
             description: translate.websiteLaunchAndWhiteListOpening
         }
     ]
 
     const nextItems: RoadmapItemInterface[] = [
         {
-            date: buildDate(3),
+            date: buildDate(4),
             description: translate.openingGold
         },
         {
@@ -64,43 +64,47 @@ const Roadmap: React.FC = () => {
             description: translate.openingSilver
         },
         {
-            date: buildDate(4),
+            date: buildDate(5),
             description: translate.openingBronze
         },
         {
             date: buildDate(5),
+            description: translate.openingIDOGosha
+        },
+        {
+            date: buildDate(6),
             description: translate.openingNFT
         },
         {
-            date: buildDate(5),
+            date: buildDate(6),
             description: translate.dailyLottery
         },
         {
-            date: buildDate(5),
+            date: buildDate(6),
             description: translate.marketplaceOpening
         },
         {
-            date: buildDate(6),
+            date: buildDate(7),
             description: translate.cryptoAssetStartupLaunch
         },
         {
-            date: buildDate(6),
+            date: buildDate(7),
             description: translate.cryptoAssetPropertyLaunch
         },
         {
-            date: buildDate(6),
+            date: buildDate(7),
             description: translate.cryptoAssetFranchiseLaunch
         },
         {
-            date: buildDate(6),
+            date: buildDate(8),
             description: translate.openingExternalPartnerships
         },
         {
-            date: buildDate(7),
+            date: buildDate(8),
             description: translate.internalSales
         },
         {
-            date: buildDate(7),
+            date: buildDate(8),
             description: translate.solanaNetwork
         }
     ]

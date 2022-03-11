@@ -10,7 +10,11 @@ const pt = {
     openingGoldList: `Abertura da lista gold`,
     registerYourEmail: `Cadastre seu e-mail para registrar interesse`,
     registerInterest: `Registrar Interesse`,
-    wantToBeSupershare: `Quero ser supershare`
+    wantToBeSupershare: `Quero ser supershare`,
+
+    //GoldList Form
+    invalidEmail: `Email invalido`,
+    enterAnEmail: `Insira um email`
 }
 
 export default pt

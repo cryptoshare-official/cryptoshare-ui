@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import tw from 'twin.macro'
 
 export const Backdrop = styled.section`
-    ${tw`fixed w-full h-full top-0 flex justify-center z-30`}
+    ${tw`fixed w-full h-full top-0 left-0 flex justify-center z-30`}
     background: #00000066;
     padding-top: ${props => props.theme.variables.paddingTopContainer};
 `

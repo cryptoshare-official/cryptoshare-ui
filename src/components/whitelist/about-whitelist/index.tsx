@@ -11,7 +11,10 @@ const AboutWhitelist: React.FC = () => {
 
     return (
         <Container>
-            <AppSection title={translate.about}>
+            <AppSection
+                title={translate.about}
+                contentClass="opacity-50 pointer-events-none"
+            >
                 <Card>{translate.aboutContent}</Card>
             </AppSection>
         </Container>

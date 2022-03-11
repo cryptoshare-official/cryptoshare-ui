@@ -12,7 +12,11 @@ const es: WhitelistTranslateType = {
     openingGoldList: `Abriendo la list Gold`,
     registerYourEmail: `Registre su correo electrónico para registrar su interés`,
     registerInterest: `registrar interés`,
-    wantToBeSupershare: `Quiero ser supershare`
+    wantToBeSupershare: `Quiero ser supershare`,
+
+    //GoldList Form
+    invalidEmail: `Email inválido`,
+    enterAnEmail: `Introduce un correo electrónico.`
 }
 
 export default es

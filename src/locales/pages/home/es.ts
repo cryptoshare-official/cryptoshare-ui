@@ -22,6 +22,19 @@ const es: HomeTranslateType = {
     //Whitelist
     wantParticipate: `¡Quiero participar!`,
 
+    //Member
+    memberTitle: `Ser miembro`,
+    memberIntroduction: `
+        Crypto Share tendrá diferentes tipos de niveles para todos los que quieran ser miembros activos de la comunidad e invertir en los criptoactivos disponibles a través de la plataforma.
+        \nCada miembro tiene derecho a votar sobre decisiones abiertas al público y el peso de los votos estará influenciado por el NFT más relevante del miembro y el Stake total de GOSHA en la plataforma.
+        \nEl NFT de tipo Super Share se limitará a la cantidad creada durante el período de las Listas blancas y después de ese período, la única forma de convertirse en Super Share será a través de la compra del NFT en Marketplace si algún propietario pone el artículo a la venta.
+        \nLa propiedad del artículo Super Share libera el derecho a adquirir activos de cualquier tipo con una ventaja de 2 días de anticipación en relación a la venta pública y tiene un peso de 1000 votos en cualquier decisión pública.
+    `,
+    memberNFTsDescription: `
+        Los NFT de oro, plata y bronce se limitarán a la cantidad creada durante el período de la Lista blanca y después de este período, la única forma de convertirse en miembro con estos perfiles será mediante la compra del NFT en Marketplace si algún propietario pone el artículo a disposición para venta, siendo el NFT de tipo Hierro ilimitado y se puede comprar en la plataforma en cualquier momento.
+        \nLa propiedad de la partida Oro, Plata y Bronce libera el derecho a adquirir bienes de cualquier tipo con una ventaja de anticipación de 1 día, 4 horas, 1 hora en relación a la venta pública respectivamente y tiene un peso de 200 votos, 50 votos y 10 votos respectivamente, pudiendo el NFT de tipo Hierro liberar el derecho de compra de cualquier activo, pero solo durante la venta pública.
+    `,
+
     //Meet
     getToKnowCryptoshare: `Conozca Cryptoshare`,
     purposeTitle: `Propósito`,
@@ -43,6 +56,7 @@ const es: HomeTranslateType = {
     openingGold: `Apertura de ICO y NFT WhiteList Gold`,
     openingSilver: `Apertura de ICO y NFT WhiteList Silver`,
     openingBronze: `Apertura ICO y NFT WhiteList Bronce`,
+    openingIDOGosha: `Apertura IDO GOSHA`,
     openingNFT: `Apertura pública de ICO y NFT`,
     dailyLottery: `Lotería Diaria`,
     marketplaceOpening: `Apertura Marketplace`,

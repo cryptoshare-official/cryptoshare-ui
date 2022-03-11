@@ -1,5 +1,5 @@
 const pt = {
-    purpose: 'Propósito',
+    purpose: 'Quem Somos',
     programICO: 'Programa ICO',
 
     // assets

@@ -1,6 +1,7 @@
 import { useMapState } from '@/hooks'
 import React, { useEffect } from 'react'
 import Meet from '@/components/home/meet'
+import Member from '@/components/home/member'
 import Roadmap from '@/components/home/roadmap'
 import AppHead from '@/components/common/app-head'
 import { scrollTo } from '@/helpers/scroll.helper'
@@ -31,6 +32,7 @@ const Home: React.FC = () => {
             <CarouselSlider />
             <OurAssets />
             <WhiteList />
+            <Member />
             <Meet />
             <Roadmap />
         </>

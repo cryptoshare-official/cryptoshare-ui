@@ -9,7 +9,7 @@ import {
 import React, { useState } from 'react'
 import AppHead from '@/components/common/app-head'
 import { Container } from '@/styles/pages/whitelist'
-import AuthModal from '@/components/common/auth-modal'
+import AuthModal from '@/components/common/modals/auth-modal'
 import Supershare from '@/components/whitelist/supershare'
 import Participate from '@/components/whitelist/participate'
 import { WhitelistService } from '@/services/whitelist.service'
@@ -88,12 +88,10 @@ const WhiteList: React.FC = () => {
 
     const onSelectWhitelist = (item: ScoreInterface) => {
         console.log('Whitelist', item)
-        setModalLoginOpen(true)
     }
 
     const onSelectSupershare = (item: ScoreInterface) => {
         console.log('Supershare', item)
-        setModalLoginOpen(true)
     }
 
     return (

@@ -7,7 +7,7 @@ export const Container = styled(AppContainer)`
 `
 
 export const Subtitle = styled.p`
-    ${tw`text-base mt-4 w-2/3 md:w-full`}
+    ${tw`text-base font-semibold mt-4 w-2/3 md:w-full`}
     color: ${props => props.theme.colors.blue};
 `
 

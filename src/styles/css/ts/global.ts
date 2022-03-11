@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import tw from 'twin.macro'
 
 export default createGlobalStyle`
   * {
@@ -8,9 +9,10 @@ export default createGlobalStyle`
   }
 
   body {
+    ${tw`text-base`}
     background: ${props => props.theme.colors.background};
     color: ${props => props.theme.colors.text};
-    font: 400 18px Montserrat, sans-serif;
+    font-family: 'Montserrat', sans-serif;
   }
 
   html {

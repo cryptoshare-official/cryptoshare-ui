@@ -14,12 +14,18 @@ const Supershare: React.FC<SupershareProps> = props => {
     return (
         <>
             <Container>
-                <AppSection title={translate.becomeSupershare}>
+                <AppSection
+                    contentClass="opacity-50 pointer-events-none"
+                    title={translate.becomeSupershare}
+                >
                     <Card>{translate.becomeSupershareContent}</Card>
                 </AppSection>
             </Container>
 
-            <AppGradientContainer contentClass="flex justify-center items-center sm:justify-between">
+            <AppGradientContainer
+                containerClass="opacity-50 pointer-events-none"
+                contentClass="flex justify-center items-center sm:justify-between"
+            >
                 <Title>{translate.becomeSupershare}</Title>
 
                 <Button>
@@ -28,7 +34,7 @@ const Supershare: React.FC<SupershareProps> = props => {
             </AppGradientContainer>
 
             <Container>
-                <AppSection>
+                <AppSection contentClass="opacity-50 pointer-events-none">
                     <ScoreGrid
                         items={props.scoreItems}
                         onSelect={props.onSelect}

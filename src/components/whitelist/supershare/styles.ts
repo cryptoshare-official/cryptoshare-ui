@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import tw from 'twin.macro'
 
 import { Card, Container } from '../styles'
-
 export { Card, Container }
 
 export const Title = styled.h1`

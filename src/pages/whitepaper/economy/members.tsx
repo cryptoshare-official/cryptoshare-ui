@@ -12,10 +12,10 @@ import {
     CardContent
 } from '@/styles/pages/whitepaper/members'
 
-import BronzeNFT from '@/assets/images/NFT/bronze.png'
 import GoldNFT from '@/assets/images/NFT/gold.png'
-import SilverNFT from '@/assets/images/NFT/silver.png'
 import IronNFT from '@/assets/images/NFT/iron.png'
+import BronzeNFT from '@/assets/images/NFT/bronze.png'
+import SilverNFT from '@/assets/images/NFT/silver.png'
 import SuperShareNFT from '@/assets/images/NFT/supershare.png'
 
 const WhitepaperEconomyMembers: React.FC = () => {

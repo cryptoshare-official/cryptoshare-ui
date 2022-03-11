@@ -3,11 +3,12 @@ import { Container, Content } from './styles'
 
 interface AppGradientContainerProps {
     contentClass?: string
+    containerClass?: string
 }
 
 const AppGradientContainer: React.FC<AppGradientContainerProps> = props => {
     return (
-        <Container>
+        <Container className={props.containerClass}>
             <Content className={props.contentClass}>{props.children}</Content>
         </Container>
     )
