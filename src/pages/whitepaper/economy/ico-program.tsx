@@ -80,7 +80,7 @@ const WhitepaperEconomyICOProgram: React.FC = () => {
                                         key={indexColumn}
                                         colSpan={column.colSpan}
                                         align={
-                                            column.colSpan == 4
+                                            column.colSpan === 4
                                                 ? 'center'
                                                 : 'left'
                                         }
