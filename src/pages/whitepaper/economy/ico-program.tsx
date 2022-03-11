@@ -1,7 +1,11 @@
 import React from 'react'
 import AppHead from '@/components/common/app-head'
 import { useTranslate } from '@/hooks/translate.hook'
-import { Container } from '@/styles/pages/whitepaper/ico-program'
+import {
+    Container,
+    Title,
+    Paragraph
+} from '@/styles/pages/whitepaper/ico-program'
 import { WhitepaperICOProgramTranslateType } from '@/locales/types'
 import locale from '@/locales/pages/whitepaper/economy/ico-program'
 
@@ -55,8 +59,9 @@ const WhitepaperEconomyICOProgram: React.FC = () => {
         <>
             <AppHead title="Whitepaper" />
             <Container>
-                <p>{translate.description}</p>
-                <p>{translate.phases}</p>
+                <Title>{translate.title}</Title>
+                <Paragraph>{translate.description}</Paragraph>
+                <Paragraph>{translate.phases}</Paragraph>
 
                 <table>
                     <thead>

@@ -3,9 +3,11 @@ import {
     Icon,
     Item,
     Group,
+    Title,
     SubItem,
     SubGroup,
     Container,
+    Separator,
     GroupTitle,
     SubContainer
 } from './styles'
@@ -166,6 +168,11 @@ const SideMenu: React.FC = () => {
 
     return (
         <Container id="sideMenu">
+            <Title>
+                Whitepaper
+                <Separator />
+            </Title>
+
             <Group>
                 {items.map((item, index) => {
                     const simpleItem = (

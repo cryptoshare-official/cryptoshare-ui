@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import tw from 'twin.macro'
 
 export const Container = styled(AppContainer)`
-    background: #fafafa;
     min-height: 100%;
     ${tw`flex pb-8`}
 `
