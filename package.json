@@ -3,6 +3,7 @@
     "private": true,
     "scripts": {
         "dev": "next dev",
+        "start": "next start",
         "build": "next build",
         "build:staging": "next build && pm2 start ./node_modules/next/dist/bin/next-start",
         "lint": "next lint"
