@@ -31,8 +31,8 @@ export const Row = styled.div`
 
     > img {
         ${tw`ml-auto sm:ml-0 sm:my-2`}
-        width: 300px;
-        height: 300px;
+        width: 370px;
+        height: 370px;
     }
 `
 
@@ -40,7 +40,7 @@ export const RowImages = styled.article`
     ${tw`flex justify-between my-12 sm:my-2`}
 
     > img {
-        width: 150px;
+        width: 200px;
         ${tw`sm:w-1/4`}
     }
 `

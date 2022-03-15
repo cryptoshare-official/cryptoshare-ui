@@ -1,22 +1,63 @@
 import React from 'react'
 import AppHead from '@/components/common/app-head'
-import { Container } from '@/styles/pages/whitepaper'
 import { useTranslate } from '@/hooks/translate.hook'
-import { WhitepaperTranslateType } from '@/locales/types'
+import { WhitepaperCryptocurrenciesTranslateType } from '@/locales/types'
 import locale from '@/locales/pages/whitepaper/economy/cryptocurrencies'
-import WhitepaperContent from '@/components/whitepaper/whitepaper-content'
+import {
+    Card,
+    Title,
+    CardGrid,
+    Container,
+    Paragraph,
+    CardImage,
+    CardTitle
+} from '@/styles/pages/whitepaper/cryptocurrencies'
+
+import CRYSHALogo from '@/assets/images/currencies/crysha.png'
+import BUSDLogo from '@/assets/images/currencies/busd.png'
+import USDTLogo from '@/assets/images/currencies/usdt.png'
 
 const WhitepaperEconomyCryptocurrencies: React.FC = () => {
-    const translate = useTranslate<WhitepaperTranslateType>(locale)
+    const translate =
+        useTranslate<WhitepaperCryptocurrenciesTranslateType>(locale)
+    const items = [
+        {
+            logo: CRYSHALogo,
+            title: 'CRYSHA',
+            description: translate.cryshaDescription
+        },
+        {
+            logo: CRYSHALogo,
+            title: 'GOSHA',
+            description: translate.goshaDescription
+        },
+        {
+            logo: BUSDLogo,
+            title: 'BUSD',
+            description: translate.busdDescription
+        },
+        {
+            logo: USDTLogo,
+            title: 'USDT',
+            description: translate.usdtDescription
+        }
+    ]
 
     return (
         <>
             <AppHead title="Whitepaper" />
             <Container>
-                <WhitepaperContent
-                    title={translate.title}
-                    content={translate.content}
-                />
+                <Title>{translate.title}</Title>
+
+                <CardGrid>
+                    {items.map((item, index) => (
+                        <Card key={index}>
+                            <CardImage src={item.logo} alt={item.title} />
+                            <CardTitle>{item.title}</CardTitle>
+                            <Paragraph>{item.description}</Paragraph>
+                        </Card>
+                    ))}
+                </CardGrid>
             </Container>
         </>
     )
