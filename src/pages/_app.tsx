@@ -6,12 +6,10 @@ import { useRouter } from 'next/router'
 import { persistStore } from 'redux-persist'
 import { PersistGate } from 'redux-persist/integration/react'
 
-import React, { useEffect } from 'react'
 import { AppProps } from 'next/app'
+import React, { useEffect } from 'react'
 import Layout from '@/components/ui/layout'
 import WhitepaperLayout from '@/components/whitepaper/layout'
-import { useMapState } from '@/hooks'
-import { LanguageStateInterface } from '@/store/interfaces/languageState.interface'
 import { setLanguage } from '@/store/reducers/language.reducer'
 
 import { LOCALE_TYPES } from '@/constants/locale.contant'
