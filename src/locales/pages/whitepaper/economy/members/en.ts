@@ -20,7 +20,7 @@ const en: WhitepaperMembersTranslateType = {
     bronzeDescription: `The Bronze type NFT will be limited to the amount created during the Bronze Whitelist period and after that period the only way to become a Bronze will be through the purchase of the NFT on the Marketplace if any owner makes the item available for sale.`,
     bronzeBenefits: `Ownership of the Bronze item releases the right to purchase assets of any type with a 1-hour anticipation advantage in relation to the public sale and has a weight of 10 votes in any public decision.`,
 
-    ironDescription: `]The Iron-type NFT will be unlimited and can be purchased on the platform at any time and on the Marketplace if any owner makes the item available for sale.`,
+    ironDescription: `The Iron-type NFT will be unlimited and can be purchased on the platform at any time and on the Marketplace if any owner makes the item available for sale.`,
     ironBenefits: `Ownership of the Iron item releases the right to purchase assets of any type during the public sale and has 1 vote weight in any public decision.`
 }
 

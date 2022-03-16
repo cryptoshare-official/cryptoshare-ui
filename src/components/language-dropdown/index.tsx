@@ -1,18 +1,18 @@
 import { useMapState } from '@/hooks'
 import React, { useState } from 'react'
+import { fadeScale } from '@/styles/animation'
 import { LanguageTypes } from '@/enums/language.enum'
 import { setLanguage } from '@/store/reducers/language.reducer'
+import { Container, Button, OptionContainer, Option } from './styles'
 import { LanguageStateInterface } from '@/store/interfaces/languageState.interface'
 
 import PTLogo from '@/assets/images/languages/pt.png'
 import ENLogo from '@/assets/images/languages/en.png'
 import ESLogo from '@/assets/images/languages/es.png'
 
-import { Container, Button, OptionContainer, Option } from './styles'
-
+import { LanguageDropdownInterface } from './@types'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
-import { LanguageDropdownInterface } from './@types'
 
 const LanguageDropdown: React.FC<LanguageDropdownInterface> = props => {
     const [isOpen, setIsOpen] = useState(false)
@@ -20,9 +20,7 @@ const LanguageDropdown: React.FC<LanguageDropdownInterface> = props => {
         'language'
     ) as LanguageStateInterface
 
-    const languages = Object.keys(LanguageTypes).map((id: string) => ({
-        id
-    }))
+    const languages = Object.keys(LanguageTypes).map((id: string) => ({ id }))
 
     const imageDisct = {
         [LanguageTypes.pt]: PTLogo,
@@ -45,19 +43,28 @@ const LanguageDropdown: React.FC<LanguageDropdownInterface> = props => {
                     width="38px"
                     height="38px"
                     alt={currentLanguage}
-                    src={imageDisct[currentLanguage]}
+                    src={imageDisct[currentLanguage as 'pt' | 'en' | 'es']}
                 />
                 <FontAwesomeIcon icon={faChevronDown} size="lg" />
             </Button>
 
             {isOpen && (
-                <OptionContainer>
+                <OptionContainer
+                    animate={fadeScale.animate}
+                    initial={fadeScale.initial}
+                    variants={fadeScale.variants}
+                >
                     {languages.map((item, index) => (
                         <Option
                             key={index}
                             onClick={() => onChangeLanguage(item.id)}
                         >
-                            {item.id}
+                            <img
+                                width="38px"
+                                height="38px"
+                                alt={currentLanguage}
+                                src={imageDisct[item.id as 'pt' | 'en' | 'es']}
+                            />
                         </Option>
                     ))}
                 </OptionContainer>

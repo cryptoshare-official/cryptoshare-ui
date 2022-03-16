@@ -6,10 +6,15 @@ import { useRouter } from 'next/router'
 import { persistStore } from 'redux-persist'
 import { PersistGate } from 'redux-persist/integration/react'
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import { AppProps } from 'next/app'
 import Layout from '@/components/ui/layout'
 import WhitepaperLayout from '@/components/whitepaper/layout'
+import { useMapState } from '@/hooks'
+import { LanguageStateInterface } from '@/store/interfaces/languageState.interface'
+import { setLanguage } from '@/store/reducers/language.reducer'
+
+import { LOCALE_TYPES } from '@/constants/locale.contant'
 
 const persistor = persistStore(store)
 
@@ -26,6 +31,22 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
 
         if (pathname.startsWith(whitepaperPath)) return layouts.whitepaper
         else return layouts.default
+    }
+
+    useEffect(() => {
+        initLanguage()
+    }, [])
+
+    const initLanguage = () => {
+        const { language: languageStore } = store.getState()
+        if (languageStore.currentLanguage) return
+
+        const userLang = navigator.language
+        const systemLanguages = Object.keys(LOCALE_TYPES).map(key => key)
+        const language = systemLanguages.find(lang => userLang.startsWith(lang))
+
+        if (language) setLanguage(language)
+        else setLanguage(LOCALE_TYPES.en)
     }
 
     return (

@@ -30,7 +30,7 @@ export const Content = styled.section`
     }
 
     p {
-        ${tw`mb-6`}
+        ${tw`mb-6 text-justify`}
     }
 
     table {

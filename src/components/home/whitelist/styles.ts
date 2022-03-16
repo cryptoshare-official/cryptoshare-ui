@@ -8,11 +8,11 @@ export const Container = styled.div`
 `
 
 export const Content = styled(AppContainer)`
-    ${tw`py-0 flex justify-center items-center sm:justify-between`}
+    ${tw`py-0 flex justify-center items-center sm:justify-between sm:flex-wrap`}
 `
 
 export const Title = styled.h1`
-    ${tw`flex mr-8 font-bold sm:text-lg`}
+    ${tw`flex mr-8 text-lg font-bold sm:text-sm`}
     color: #ffffff;
     font-size: 40px;
     font-weight: bold;

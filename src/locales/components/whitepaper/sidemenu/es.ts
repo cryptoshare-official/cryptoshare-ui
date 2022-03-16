@@ -1,6 +1,7 @@
 import { WhitepaperSideMenuTranslateType } from '@/locales/types'
 
 const es: WhitepaperSideMenuTranslateType = {
+    introduction: 'Introducción',
     purpose: 'Quienes somos',
     programICO: 'Programa ICO',
 

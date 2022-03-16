@@ -27,7 +27,7 @@ const SideMenu: React.FC<SideMenuProps> = ({ items, onSelect }) => {
     }, [])
 
     const isActive = (route: string) => {
-        const curretnPath = `/whitepaper/${route}`
+        const curretnPath = `/whitepaper${route ? `/${route}` : ''}`
         const { pathname } = router
 
         return pathname === curretnPath

@@ -6,10 +6,10 @@ const content = [
 
 const theme = {
     fontSize: {
-        sm: '12px',
-        base: '14px',
-        lg: '18px',
-        xl: '36px'
+        sm: '0.75rem',
+        base: '0.875rem',
+        lg: '1.125rem',
+        xl: '2.25rem'
     },
     screens: {
         xs: { max: '475px' },

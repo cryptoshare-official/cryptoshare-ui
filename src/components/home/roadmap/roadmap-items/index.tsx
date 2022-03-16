@@ -12,7 +12,7 @@ const RoadmapItems: React.FC<RoadmapItemsProps> = ({ items, isCompleted }) => {
         <Article>
             {items.map(({ date, description }, index) => (
                 <Item key={index} className={isCompleted ? 'completed' : ''}>
-                    <ItemDate>{date}</ItemDate>
+                    {date && <ItemDate>{date}</ItemDate>}
                     <ItemLabel>{description}</ItemLabel>
                 </Item>
             ))}

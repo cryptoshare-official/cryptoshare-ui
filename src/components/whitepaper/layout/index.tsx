@@ -7,7 +7,7 @@ import Layout from '@/components/ui/layout'
 
 import { BsCoin } from 'react-icons/bs'
 import { GiDeathStar, GiTakeMyMoney } from 'react-icons/gi'
-import { BiDiamond, BiStar, BiTransferAlt } from 'react-icons/bi'
+import { BiDiamond, BiHomeCircle, BiStar, BiTransferAlt } from 'react-icons/bi'
 import { MdDeviceHub, MdSettings, MdStore } from 'react-icons/md'
 import { FaHandsHelping, FaHeartbeat, FaUsers } from 'react-icons/fa'
 
@@ -22,6 +22,12 @@ const WhitepaperLayout: React.FC = ({ children }) => {
     const translate = useTranslate<WhitepaperSideMenuTranslateType>(locale)
 
     const items: MenuItemsInterface[] = [
+        {
+            icon: <BiHomeCircle />,
+            name: translate.introduction,
+            route: '',
+            subItems: []
+        },
         {
             icon: <BiDiamond />,
             name: translate.purpose,

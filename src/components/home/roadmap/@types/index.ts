@@ -1,4 +1,4 @@
 export interface RoadmapItemInterface {
-    date: string
+    date?: string
     description: string
 }

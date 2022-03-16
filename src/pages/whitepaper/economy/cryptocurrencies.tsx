@@ -4,16 +4,19 @@ import { useTranslate } from '@/hooks/translate.hook'
 import { WhitepaperCryptocurrenciesTranslateType } from '@/locales/types'
 import locale from '@/locales/pages/whitepaper/economy/cryptocurrencies'
 import {
+    Box,
     Card,
     Title,
     CardGrid,
     Container,
     Paragraph,
     CardImage,
-    CardTitle
+    CardTitle,
+    ImageContainer
 } from '@/styles/pages/whitepaper/cryptocurrencies'
 
 import CRYSHALogo from '@/assets/images/currencies/crysha.png'
+import GOSHALogo from '@/assets/images/currencies/gosha.png'
 import BUSDLogo from '@/assets/images/currencies/busd.png'
 import USDTLogo from '@/assets/images/currencies/usdt.png'
 
@@ -27,7 +30,7 @@ const WhitepaperEconomyCryptocurrencies: React.FC = () => {
             description: translate.cryshaDescription
         },
         {
-            logo: CRYSHALogo,
+            logo: GOSHALogo,
             title: 'GOSHA',
             description: translate.goshaDescription
         },
@@ -52,8 +55,16 @@ const WhitepaperEconomyCryptocurrencies: React.FC = () => {
                 <CardGrid>
                     {items.map((item, index) => (
                         <Card key={index}>
-                            <CardImage src={item.logo} alt={item.title} />
-                            <CardTitle>{item.title}</CardTitle>
+                            <Box>
+                                <ImageContainer>
+                                    <CardImage
+                                        src={item.logo}
+                                        alt={item.title}
+                                    />
+                                </ImageContainer>
+
+                                <CardTitle>{item.title}</CardTitle>
+                            </Box>
                             <Paragraph>{item.description}</Paragraph>
                         </Card>
                     ))}

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import tw from 'twin.macro'
 
 export const Container = styled(AppContainer)`
-    ${tw`hidden sm:block pt-0 px-0 mb-4`}
+    ${tw`hidden md:block pt-0 px-0 mb-4`}
 `
 
 export const Badge = styled.span`

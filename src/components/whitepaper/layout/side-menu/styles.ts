@@ -4,7 +4,7 @@ import tw from 'twin.macro'
 import { AppSeparator } from '@/styles/css/components'
 
 export const Container = styled.aside`
-    ${tw`py-6 w-1/4 sticky overflow-y-auto sm:hidden`}
+    ${tw`py-6 w-1/4 sticky overflow-y-auto md:hidden`}
     max-height: 84vh;
     background: #ffffff;
     border-radius: 4px;

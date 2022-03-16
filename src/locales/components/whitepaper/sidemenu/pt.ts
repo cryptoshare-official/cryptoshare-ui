@@ -1,4 +1,5 @@
 const pt = {
+    introduction: 'Introdução',
     purpose: 'Quem Somos',
     programICO: 'Programa ICO',
 

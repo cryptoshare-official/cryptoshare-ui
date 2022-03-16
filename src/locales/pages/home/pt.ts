@@ -43,6 +43,8 @@ const pt = {
     visionAndValuesDescription: `Ser conhecida como a principal plataforma de investimento democratizado na web3.0 e atingir esse objetivo baseados em nossos três pilares: transparência, integridade e democratização.`,
 
     //RoadMap
+    secondQuarter: `Segundo trimestre`,
+    thirdQuarter: `Terceiro trimestre`,
     titleRoadmap: `Com base na evolução dos negócios do grupo Crypto Share, o projeto de democratização dos investimentos na web3.0 tem sua primeira fase estruturada com os eventos listados abaixo:`,
     subtitleRoadmap: `Mais Ativos e Parcerias em evolução contínua de acordo com as decisões da comunidade`,
     projectIdealization: `Idealização do Projeto`,

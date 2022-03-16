@@ -25,11 +25,17 @@ export const Div = styled.div`
 
 export const Title = styled.h2`
     color: ${props => props.theme.colors.gray};
-    ${tw`text-xl sm:text-lg w-1/2 font-bold whitespace-pre-wrap mb-5 sm:mb-2 sm:w-full`}
+    ${tw`text-xl sm:text-base sm:text-sm sm:mb-2 w-1/2 font-bold whitespace-pre-wrap mb-5 `}
 `
 
 export const Button = styled(AppButton)`
     letter-spacing: 1px;
     background: ${props => props.theme.colors.gradient};
-    ${tw`mr-4 w-1/4 text-sm uppercase text-white sm:px-0 sm:py-2 sm:w-3/4 sm:h-auto sm:font-bold`}
+    ${tw`mr-4 w-1/4 uppercase text-white sm:px-0 sm:py-2 sm:w-2/4 sm:h-auto sm:font-bold`}
+
+    font-size: 80%;
+
+    @media (max-width: 640px) {
+        font-size: 40%;
+    }
 `

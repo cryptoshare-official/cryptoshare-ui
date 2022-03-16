@@ -45,6 +45,8 @@ const en: HomeTranslateType = {
     visionAndValuesDescription: `To be known as the leading democratized investment platform on web3.0 and to achieve this objective based on our three pillars: transparency, integrity and democratization.`,
 
     //RoadMap
+    secondQuarter: `Second quarter`,
+    thirdQuarter: `Third quarter`,
     titleRoadmap: `Based on the evolution of crypto share group's business, the project to democratize investments in web3.0 has its first phase structured with the events listed below:`,
     subtitleRoadmap: `More Assets and ContinuousLy Evolving Partnerships according to community decisions`,
     projectIdealization: `Project Idealization`,

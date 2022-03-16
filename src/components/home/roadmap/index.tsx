@@ -54,59 +54,23 @@ const Roadmap: React.FC = () => {
         }
     ]
 
-    const nextItems: RoadmapItemInterface[] = [
-        {
-            date: buildDate(4),
-            description: translate.openingGold
-        },
-        {
-            date: buildDate(4),
-            description: translate.openingSilver
-        },
-        {
-            date: buildDate(5),
-            description: translate.openingBronze
-        },
-        {
-            date: buildDate(5),
-            description: translate.openingIDOGosha
-        },
-        {
-            date: buildDate(6),
-            description: translate.openingNFT
-        },
-        {
-            date: buildDate(6),
-            description: translate.dailyLottery
-        },
-        {
-            date: buildDate(6),
-            description: translate.marketplaceOpening
-        },
-        {
-            date: buildDate(7),
-            description: translate.cryptoAssetStartupLaunch
-        },
-        {
-            date: buildDate(7),
-            description: translate.cryptoAssetPropertyLaunch
-        },
-        {
-            date: buildDate(7),
-            description: translate.cryptoAssetFranchiseLaunch
-        },
-        {
-            date: buildDate(8),
-            description: translate.openingExternalPartnerships
-        },
-        {
-            date: buildDate(8),
-            description: translate.internalSales
-        },
-        {
-            date: buildDate(8),
-            description: translate.solanaNetwork
-        }
+    const secondQuarter: RoadmapItemInterface[] = [
+        { description: translate.openingGold },
+        { description: translate.openingSilver },
+        { description: translate.openingBronze },
+        { description: translate.openingIDOGosha },
+        { description: translate.openingNFT },
+        { description: translate.dailyLottery }
+    ]
+
+    const thirdQuarter: RoadmapItemInterface[] = [
+        { description: translate.marketplaceOpening },
+        { description: translate.cryptoAssetStartupLaunch },
+        { description: translate.cryptoAssetPropertyLaunch },
+        { description: translate.cryptoAssetFranchiseLaunch },
+        { description: translate.openingExternalPartnerships },
+        { description: translate.internalSales },
+        { description: translate.solanaNetwork }
     ]
 
     return (
@@ -115,8 +79,12 @@ const Roadmap: React.FC = () => {
                 <Subtitle>{translate.titleRoadmap}</Subtitle>
 
                 <RoadmapItems items={completedItems} isCompleted={true} />
-                <RoadmapSeparator>Upcomming</RoadmapSeparator>
-                <RoadmapItems items={nextItems} isCompleted={false} />
+
+                <RoadmapSeparator>{translate.secondQuarter}</RoadmapSeparator>
+                <RoadmapItems items={secondQuarter} isCompleted={false} />
+
+                <RoadmapSeparator>{translate.thirdQuarter}</RoadmapSeparator>
+                <RoadmapItems items={thirdQuarter} isCompleted={false} />
 
                 <Subtitle>{translate.subtitleRoadmap}</Subtitle>
             </AppSection>

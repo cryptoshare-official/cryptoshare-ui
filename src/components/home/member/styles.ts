@@ -7,9 +7,27 @@ export const Container = styled(AppContainer)`
 `
 
 export const Content = styled.div`
+    ${tw`px-0`}
     padding-left: 8%;
     padding-right: 8%;
-    ${tw`px-0`}
+
+    @keyframes spin {
+        0% {
+            transform: rotateY(0deg);
+        }
+        25% {
+            transform: rotateY(-20deg);
+        }
+        50% {
+            transform: rotateY(0deg);
+        }
+        75% {
+            transform: rotateY(20deg);
+        }
+        100% {
+            transform: rotateY(0deg);
+        }
+    }
 `
 
 export const Title = styled.h1`
@@ -30,23 +48,28 @@ export const Row = styled.div`
     }
 
     > img {
-        ${tw`ml-auto sm:ml-0 sm:my-2`}
-        width: 370px;
-        height: 370px;
+        ${tw`ml-auto self-center sm:ml-0 sm:my-2 w-80 h-80 sm:h-72`}
     }
 `
 
 export const RowImages = styled.article`
-    ${tw`flex justify-between my-12 sm:my-2`}
+    ${tw`flex justify-between my-12 sm:my-2 flex-wrap`}
 
     > img {
-        width: 200px;
-        ${tw`sm:w-1/4`}
+        ${tw`w-3/12 sm:w-6/12`}
     }
 `
 
 export const Text = styled.p`
+    ${tw`text-justify`}
     white-space: pre-line;
 `
 
-export const Image = styled.img``
+export const Image = styled.img`
+    ${tw`cursor-default`}
+    transform-style: preserve-3d;
+
+    &:hover {
+        animation: spin 5s linear infinite;
+    }
+`

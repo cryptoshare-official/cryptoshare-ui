@@ -1,9 +1,10 @@
 import store from '@/store'
 import { createSlice } from '@reduxjs/toolkit'
+import { LOCALE_TYPES } from '@/constants/locale.contant'
 import { LanguageStateInterface } from '../interfaces/languageState.interface'
 
 const initialState: LanguageStateInterface = {
-    currentLanguage: 'pt'
+    currentLanguage: ''
 }
 
 const { actions: mutations, reducer } = createSlice({
@@ -11,7 +12,7 @@ const { actions: mutations, reducer } = createSlice({
     initialState,
     reducers: {
         setLanguage(state, { payload }) {
-            state.currentLanguage = payload
+            state.currentLanguage = payload || LOCALE_TYPES.en
         }
     }
 })

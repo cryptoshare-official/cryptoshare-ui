@@ -1,5 +1,6 @@
 import tw from 'twin.macro'
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 import { AppButton } from '@/styles/css/components'
 
 export const Container = styled.section`
@@ -21,11 +22,11 @@ export const Button = styled(AppButton)`
     background: #f5f5f5;
 `
 
-export const OptionContainer = styled.article`
+export const OptionContainer = styled(motion.article)`
     ${tw`
         mt-2
         py-1
-        w-56
+        w-40
         ring-1
         right-0
         absolute
@@ -36,9 +37,12 @@ export const OptionContainer = styled.article`
         ring-opacity-5
         origin-top-right
         focus:outline-none
+
+        flex
+        justify-between
     `}
 `
 
 export const Option = styled.button`
-    ${tw`p-3 uppercase w-full text-left`}
+    ${tw`p-3 uppercase  text-left`}
 `
