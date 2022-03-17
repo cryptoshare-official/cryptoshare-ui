@@ -38,14 +38,14 @@ const pt = {
     purposeTitle: `Proposito`,
     missionTitle: `Missão`,
     visionAndValuesTitle: `Visão e Valores`,
-    purposeDescription: `A Crypto Share nasce em um momento de expansão da web3.0 e com toda tecnologia baseada em confiança que essa revolução nos proporciona, agora temos como democratizar investimentos antes inalcançáveis para a grande maioria dos investidores.`,
+    purposeDescription: `A Crypto Share nasce em um momento de expansão da web 3.0 e com toda tecnologia baseada em confiança que essa revolução nos proporciona, agora temos como democratizar investimentos antes inalcançáveis para a grande maioria dos investidores.`,
     missionDescription: `Democratizar os investimentos para que investidores com qualquer tamanho de capital possa participar de projetos maiores mesmo sem ter estrutura, conhecimento e dinheiro suficiente para esses projetos.`,
-    visionAndValuesDescription: `Ser conhecida como a principal plataforma de investimento democratizado na web3.0 e atingir esse objetivo baseados em nossos três pilares: transparência, integridade e democratização.`,
+    visionAndValuesDescription: `Ser conhecida como a principal plataforma de investimento democratizado na web 3.0 e atingir esse objetivo baseados em nossos três pilares: transparência, integridade e democratização.`,
 
     //RoadMap
     secondQuarter: `Segundo trimestre`,
     thirdQuarter: `Terceiro trimestre`,
-    titleRoadmap: `Com base na evolução dos negócios do grupo Crypto Share, o projeto de democratização dos investimentos na web3.0 tem sua primeira fase estruturada com os eventos listados abaixo:`,
+    titleRoadmap: `Com base na evolução dos negócios do grupo Crypto Share, o projeto de democratização dos investimentos na web 3.0 tem sua primeira fase estruturada com os eventos listados abaixo:`,
     subtitleRoadmap: `Mais Ativos e Parcerias em evolução contínua de acordo com as decisões da comunidade`,
     projectIdealization: `Idealização do Projeto`,
     teamBuilding: `Formação da Equipe`,

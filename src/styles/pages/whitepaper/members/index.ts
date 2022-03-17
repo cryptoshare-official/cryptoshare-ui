@@ -1,7 +1,4 @@
-import {
-    Content,
-    Title as WhitepapperTitle
-} from '@/components/whitepaper/whitepaper-content/styles'
+import { Content, Title as WhitepapperTitle } from '@/styles/pages/whitepaper'
 import styled from 'styled-components'
 import tw from 'twin.macro'
 

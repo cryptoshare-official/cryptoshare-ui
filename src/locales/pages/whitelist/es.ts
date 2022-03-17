@@ -16,7 +16,9 @@ const es: WhitelistTranslateType = {
 
     //GoldList Form
     invalidEmail: `Email inválido`,
-    enterAnEmail: `Introduce un correo electrónico.`
+    enterAnEmail: `Introduce un Email.`,
+    secondQuarter: `Segundo cuarto`,
+    emailRegisteredSuccessfully: `Email registrado con exito`
 }
 
 export default es

@@ -26,6 +26,10 @@ export const Item = styled.div`
         &:before {
             background: ${props => props.theme.colors.gradient};
         }
+
+        h5 {
+            ${tw`sm:w-2/4`}
+        }
     }
 `
 

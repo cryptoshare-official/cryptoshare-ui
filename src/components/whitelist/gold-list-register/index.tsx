@@ -41,7 +41,10 @@ const GoldListRegister: React.FC<GoldListRegisterProps> = props => {
 
     return (
         <Container>
-            <AppSection title={translate.openingGoldList} subtitle="25/03/2022">
+            <AppSection
+                title={translate.openingGoldList}
+                subtitle={translate.secondQuarter}
+            >
                 <Card>
                     <Form onSubmit={handleSubmit(handleSubmitForm)}>
                         <FormGroup>

@@ -25,12 +25,12 @@ export const Content = styled.section`
 
     p,
     div {
-        ${tw`text-base`}
+        ${tw`text-base text-justify`}
         color: ${props => props.theme.colors.gray_1};
     }
 
     p {
-        ${tw`mb-6 text-justify`}
+        ${tw`mb-6`}
     }
 
     table {
@@ -54,7 +54,9 @@ export const Content = styled.section`
     }
 `
 
-export const Paragraph = styled.p``
+export const Paragraph = styled.p`
+    ${tw``}
+`
 // #endregion Shared
 
 export const CardContainer = styled.section`

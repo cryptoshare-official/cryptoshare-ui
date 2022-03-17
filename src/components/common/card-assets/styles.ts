@@ -21,5 +21,5 @@ export const Separator = styled(AppSeparator)`
 `
 
 export const Text = styled.p`
-    ${tw`text-base`}
+    ${tw`text-base text-justify`}
 `

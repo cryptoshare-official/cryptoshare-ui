@@ -40,14 +40,14 @@ const es: HomeTranslateType = {
     purposeTitle: `Propósito`,
     missionTitle: `Misión`,
     visionAndValuesTitle: `Visión y Valores`,
-    purposeDescription: `Crypto Share nació en un momento de expansión web3.0 y con toda la tecnología basada en la confianza que nos brinda esta revolución, ahora tenemos los medios para democratizar inversiones que antes eran inalcanzables para la gran mayoría de los inversores.`,
+    purposeDescription: `Crypto Share nació en un momento de expansión web 3.0 y con toda la tecnología basada en la confianza que nos brinda esta revolución, ahora tenemos los medios para democratizar inversiones que antes eran inalcanzables para la gran mayoría de los inversores.`,
     missionDescription: `Democratizar las inversiones para que inversionistas con cualquier tamaño de capital puedan participar en proyectos más grandes aún sin tener suficiente estructura, conocimiento y dinero para estos proyectos.`,
-    visionAndValuesDescription: `Ser conocidos como la plataforma de inversión democratizada líder en web3.0 y lograr este objetivo en base a nuestros tres pilares: transparencia, integridad y democratización.`,
+    visionAndValuesDescription: `Ser conocidos como la plataforma de inversión democratizada líder en web 3.0 y lograr este objetivo en base a nuestros tres pilares: transparencia, integridad y democratización.`,
 
     //RoadMap
     secondQuarter: `Segundo cuarto`,
     thirdQuarter: `Tercer cuarto`,
-    titleRoadmap: `Basado en la evolución del negocio del grupo de acciones criptográficas, el proyecto para democratizar las inversiones en web3.0 tiene su primera fase estructurada con los eventos que se enumeran a continuación:`,
+    titleRoadmap: `Basado en la evolución del negocio del grupo de acciones criptográficas, el proyecto para democratizar las inversiones en web 3.0 tiene su primera fase estructurada con los eventos que se enumeran a continuación:`,
     subtitleRoadmap: `Más activos y asociaciones en continua evolución de acuerdo con las decisiones de la comunidad`,
     projectIdealization: `Idealización de proyectos`,
     teamBuilding: `Creación de equipos`,

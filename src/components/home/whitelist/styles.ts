@@ -8,24 +8,24 @@ export const Container = styled.div`
 `
 
 export const Content = styled(AppContainer)`
-    ${tw`py-0 flex justify-center items-center sm:justify-between sm:flex-wrap`}
+    ${tw`py-0 flex justify-center items-center sm:justify-between `}
 `
 
 export const Title = styled.h1`
-    ${tw`flex mr-8 text-lg font-bold sm:text-sm`}
+    ${tw`flex text-lg font-bold sm:text-sm sm:w-2/4`}
     color: #ffffff;
     font-size: 40px;
     font-weight: bold;
 `
 
 export const Button = styled(AppButton)`
-    ${tw`px-10 uppercase font-bold`}
+    ${tw`px-10 uppercase font-bold sm:w-2/4`}
     border-radius: 8px;
     background: #ffffff;
 `
 
 export const ButtonText = styled.h4`
-    ${tw`font-bold text-base`}
+    ${tw`font-bold text-base sm:text-sm`}
     background: ${props => props.theme.colors.gradient};
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;

@@ -14,7 +14,9 @@ const pt = {
 
     //GoldList Form
     invalidEmail: `Email invalido`,
-    enterAnEmail: `Insira um email`
+    enterAnEmail: `Insira um email`,
+    secondQuarter: `Segundo trimestre`,
+    emailRegisteredSuccessfully: `Email cadastrado com sucesso`
 }
 
 export default pt

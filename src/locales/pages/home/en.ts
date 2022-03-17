@@ -40,14 +40,14 @@ const en: HomeTranslateType = {
     purposeTitle: `Purpose`,
     missionTitle: `Mission`,
     visionAndValuesTitle: `Vision And Values`,
-    purposeDescription: `Crypto Share was born at a time of web3.0 expansion and with all the technology based on trust that this revolution provides us, we now have the means to democratize investments that were previously unattainable for the vast majority of investors.`,
+    purposeDescription: `Crypto Share was born at a time of web 3.0 expansion and with all the technology based on trust that this revolution provides us, we now have the means to democratize investments that were previously unattainable for the vast majority of investors.`,
     missionDescription: `Democratize investments so that investors with any size of capital can participate in larger projects even without having enough structure, knowledge and money for these projects.`,
-    visionAndValuesDescription: `To be known as the leading democratized investment platform on web3.0 and to achieve this objective based on our three pillars: transparency, integrity and democratization.`,
+    visionAndValuesDescription: `To be known as the leading democratized investment platform on web 3.0 and to achieve this objective based on our three pillars: transparency, integrity and democratization.`,
 
     //RoadMap
     secondQuarter: `Second quarter`,
     thirdQuarter: `Third quarter`,
-    titleRoadmap: `Based on the evolution of crypto share group's business, the project to democratize investments in web3.0 has its first phase structured with the events listed below:`,
+    titleRoadmap: `Based on the evolution of crypto share group's business, the project to democratize investments in web 3.0 has its first phase structured with the events listed below:`,
     subtitleRoadmap: `More Assets and ContinuousLy Evolving Partnerships according to community decisions`,
     projectIdealization: `Project Idealization`,
     teamBuilding: `Team Building`,

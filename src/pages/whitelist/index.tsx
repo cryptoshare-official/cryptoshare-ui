@@ -7,18 +7,33 @@ import {
     FaTelegramPlane
 } from 'react-icons/fa'
 import React, { useState } from 'react'
+import locales from '@/locales/pages/whitelist'
 import AppHead from '@/components/common/app-head'
 import { Container } from '@/styles/pages/whitelist'
-import AuthModal from '@/components/common/modals/auth-modal'
+import { useTranslate } from '@/hooks/translate.hook'
+import { WhitelistTranslateType } from '@/locales/types'
 import Supershare from '@/components/whitelist/supershare'
 import Participate from '@/components/whitelist/participate'
+import AuthModal from '@/components/common/modals/auth-modal'
 import { WhitelistService } from '@/services/whitelist.service'
 import { ScoreInterface } from '@/interfaces/whitelist.interface'
 import AboutWhitelist from '@/components/whitelist/about-whitelist'
 import GoldListRegister from '@/components/whitelist/gold-list-register'
+import AlertModal from '@/components/common/modals/alert-modal'
+import { ExceptionInterface } from '@/interfaces/exception.interface'
+
+interface AlertInterface {
+    message: string
+    type: 'success' | 'error' | 'warning'
+}
 
 const WhiteList: React.FC = () => {
     const [isModalLoginOpen, setModalLoginOpen] = useState(false)
+    const [isModalAlertOpen, setModalAlertOpen] = useState(false)
+    const translate = useTranslate<WhitelistTranslateType>(locales)
+    const [modalAlertData, setModalAlertData] = useState<AlertInterface>(
+        {} as AlertInterface
+    )
     const whitelistService = new WhitelistService()
 
     const whitelistItems: ScoreInterface[] = [
@@ -82,8 +97,19 @@ const WhiteList: React.FC = () => {
         }
     ]
 
-    const onSubmitGoldListForm = (data: { email: string }) => {
-        whitelistService.sendEmail(data.email)
+    const onSubmitGoldListForm = async (data: { email: string }) => {
+        try {
+            await whitelistService.sendEmail(data.email)
+
+            const message = translate.emailRegisteredSuccessfully
+            setModalAlertData({ message, type: 'success' })
+        } catch (error) {
+            const exception: any = error as any
+            const { message } = exception.response.data
+            setModalAlertData({ message, type: 'error' })
+        } finally {
+            setModalAlertOpen(true)
+        }
     }
 
     const onSelectWhitelist = (item: ScoreInterface) => {
@@ -114,6 +140,14 @@ const WhiteList: React.FC = () => {
                 isOpen={isModalLoginOpen}
                 onClose={() => setModalLoginOpen(false)}
                 onBackdropClick={() => setModalLoginOpen(false)}
+            />
+
+            <AlertModal
+                isOpen={isModalAlertOpen}
+                type={modalAlertData.type}
+                message={modalAlertData.message}
+                onClose={() => setModalAlertOpen(false)}
+                onBackdropClick={() => setModalAlertOpen(false)}
             />
         </>
     )
