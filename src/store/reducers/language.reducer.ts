@@ -1,10 +1,13 @@
 import store from '@/store'
 import { createSlice } from '@reduxjs/toolkit'
 import { LOCALE_TYPES } from '@/constants/locale.contant'
-import { LanguageStateInterface } from '../interfaces/languageState.interface'
+import {
+    CurrentLanguageType,
+    LanguageStateInterface
+} from '../interfaces/languageState.interface'
 
 const initialState: LanguageStateInterface = {
-    currentLanguage: ''
+    currentLanguage: '' as CurrentLanguageType
 }
 
 const { actions: mutations, reducer } = createSlice({

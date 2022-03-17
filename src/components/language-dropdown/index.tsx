@@ -4,7 +4,10 @@ import { fadeScale } from '@/styles/animation'
 import { LanguageTypes } from '@/enums/language.enum'
 import { setLanguage } from '@/store/reducers/language.reducer'
 import { Container, Button, OptionContainer, Option } from './styles'
-import { LanguageStateInterface } from '@/store/interfaces/languageState.interface'
+import {
+    CurrentLanguageType,
+    LanguageStateInterface
+} from '@/store/interfaces/languageState.interface'
 
 import PTLogo from '@/assets/images/languages/pt.png'
 import ENLogo from '@/assets/images/languages/en.png'
@@ -43,7 +46,7 @@ const LanguageDropdown: React.FC<LanguageDropdownInterface> = props => {
                     width="38px"
                     height="38px"
                     alt={currentLanguage}
-                    src={imageDisct[currentLanguage as 'pt' | 'en' | 'es']}
+                    src={imageDisct[currentLanguage]}
                 />
                 <FontAwesomeIcon icon={faChevronDown} size="lg" />
             </Button>
@@ -63,7 +66,7 @@ const LanguageDropdown: React.FC<LanguageDropdownInterface> = props => {
                                 width="38px"
                                 height="38px"
                                 alt={currentLanguage}
-                                src={imageDisct[item.id as 'pt' | 'en' | 'es']}
+                                src={imageDisct[item.id as CurrentLanguageType]}
                             />
                         </Option>
                     ))}

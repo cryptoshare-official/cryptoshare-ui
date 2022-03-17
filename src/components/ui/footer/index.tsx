@@ -1,6 +1,12 @@
 import React from 'react'
 import { getYear } from 'date-fns'
+import { useMapState } from '@/hooks'
+import locales from '@/locales/components/footer'
 import Logo from '@/assets/images/logo-white.png'
+import { useTranslate } from '@/hooks/translate.hook'
+import { FooterTranslateType } from '@/locales/types'
+import { LanguageTypes } from '@/enums/language.enum'
+import { LanguageStateInterface } from '@/store/interfaces/languageState.interface'
 import {
     Small,
     Article,
@@ -19,33 +25,64 @@ import {
 
 const Footer: React.FC = () => {
     const currentYear = getYear(new Date())
+    const translate = useTranslate<FooterTranslateType>(locales)
     const openLink = (url: string) => window.open(url, '_blank')?.focus()
+    const { currentLanguage } = useMapState(
+        'language'
+    ) as LanguageStateInterface
+
+    const discordLinks = {
+        [LanguageTypes.pt]: 'https://discord.gg/8Smuuf3c',
+        [LanguageTypes.en]: 'https://discord.gg/gpCbyuxp',
+        [LanguageTypes.es]: 'https://discord.gg/EwW9mkmT'
+    }
+    const facebookLinks = {
+        [LanguageTypes.pt]:
+            'https://www.facebook.com/Crypto-Share-105266032124339',
+        [LanguageTypes.en]:
+            'https://www.facebook.com/Crypto-Share-English-108596495119336',
+        [LanguageTypes.es]:
+            'https://www.facebook.com/Crypto-Share-Espanol-102254082416786'
+    }
+    const telegramLinks = {
+        [LanguageTypes.pt]: 'https://t.me/crypto_share_portugues',
+        [LanguageTypes.en]: 'https://t.me/crypto_share_english',
+        [LanguageTypes.es]: 'https://t.me/crypto_share_spanish'
+    }
+    const instagramLinks = {
+        [LanguageTypes.pt]:
+            'https://instagram.com/cryptoshare_oficial_portugues?utm_medium=copy_link',
+        [LanguageTypes.en]:
+            'https://www.instagram.com/cryptoshare_official_english/?utm_medium=copy_link',
+        [LanguageTypes.es]:
+            'https://www.instagram.com/cryptoshare_oficial_espanol/?utm_medium=copy_link'
+    }
 
     const socialItems = [
         {
             title: 'Discord',
             icon: <FaDiscord />,
-            link: 'https://discord.gg/8Smuuf3c'
+            link: discordLinks[currentLanguage]
         },
         {
             title: 'Facebook',
             icon: <FaFacebookF />,
-            link: 'https://www.facebook.com'
+            link: facebookLinks[currentLanguage]
         },
-        {
-            title: 'Twitter',
-            icon: <FaTwitter />,
-            link: 'https://www.twitter.com'
-        },
+        // {
+        //     title: 'Twitter',
+        //     icon: <FaTwitter />,
+        //     link: 'https://www.twitter.com'
+        // },
         {
             title: 'Instagram',
             icon: <FaInstagram />,
-            link: 'https://instagram.com/cryptoshare_official_portugues?utm_medium=copy_link'
+            link: instagramLinks[currentLanguage]
         },
         {
             title: 'Telegram',
             icon: <FaTelegramPlane />,
-            link: 'https://t.me/crypto_share_portugues'
+            link: telegramLinks[currentLanguage]
         }
     ]
 
@@ -70,7 +107,7 @@ const Footer: React.FC = () => {
 
                 <Separator />
                 <Small>
-                    {currentYear} Cryptoshare - Todos os direitos reservados
+                    {currentYear} Cryptoshare - {translate.allRightsReserved}
                 </Small>
             </Content>
         </Container>

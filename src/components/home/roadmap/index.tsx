@@ -26,7 +26,7 @@ const Roadmap: React.FC = () => {
         }
 
         const date = new Date(year, month - 1, 1)
-        const locale = dateLocaleDisct[currentLanguage as 'pt' | 'en' | 'es']
+        const locale = dateLocaleDisct[currentLanguage]
 
         return format(date, 'LLLL yyyy', { locale })
     }

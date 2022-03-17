@@ -13,7 +13,7 @@ const axiosClient = axios.create({
 
 const getCurrentLanguage = () => {
     const { language } = store.getState()
-    return LOCALE_TYPES[language.currentLanguage as 'pt' | 'en' | 'es']
+    return LOCALE_TYPES[language.currentLanguage]
 }
 
 axiosClient.interceptors.request.use((config: AxiosRequestConfig) => {

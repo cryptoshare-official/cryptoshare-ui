@@ -1,5 +1,6 @@
 import home from '@/locales/pages/home/pt'
 import header from '@/locales/components/header/pt'
+import footer from '@/locales/components/footer/pt'
 import whitelist from '@/locales/pages/whitelist/pt'
 import whitepaperSideMenu from '@/locales/components/whitepaper/sidemenu/pt'
 import whitepaperMembers from '@/locales/pages/whitepaper/economy/members/pt'
@@ -9,6 +10,7 @@ import whitepaperCryptocurrencies from '@/locales/pages/whitepaper/economy/crypt
 
 export type HomeTranslateType = typeof home
 export type HeaderTranslateType = typeof header
+export type FooterTranslateType = typeof footer
 export type WhitelistTranslateType = typeof whitelist
 
 // #region Whitepaper
