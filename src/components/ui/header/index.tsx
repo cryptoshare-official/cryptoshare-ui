@@ -62,7 +62,9 @@ const Header: React.FC = () => {
             setOpenMenu(false)
         })
 
-        document.removeEventListener('scroll', () => {})
+        document.removeEventListener('scroll', () => {
+            console.warn('header control finished')
+        })
     }
 
     const onClickLink = (link: HeaderInterface) => {
