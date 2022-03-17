@@ -13,6 +13,8 @@ import WhitepaperLayout from '@/components/whitepaper/layout'
 import { setLanguage } from '@/store/reducers/language.reducer'
 
 import { LOCALE_TYPES } from '@/constants/locale.contant'
+import { hotjar } from 'react-hotjar'
+import enviroments from '@/config/enviroments'
 
 const persistor = persistStore(store)
 
@@ -32,8 +34,12 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
     }
 
     useEffect(() => {
+        initHotjar()
         initLanguage()
     }, [])
+
+    const initHotjar = () =>
+        hotjar.initialize(enviroments.HOTJAR_HJID, enviroments.HOTJAR_HJSV)
 
     const initLanguage = () => {
         const { language: languageStore } = store.getState()
