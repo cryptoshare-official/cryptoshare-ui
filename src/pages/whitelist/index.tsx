@@ -21,6 +21,7 @@ import AboutWhitelist from '@/components/whitelist/about-whitelist'
 import GoldListRegister from '@/components/whitelist/gold-list-register'
 import AlertModal from '@/components/common/modals/alert-modal'
 import { ExceptionInterface } from '@/interfaces/exception.interface'
+import { GoogleAnalyticsService } from '@/services/google-analytics.service'
 
 interface AlertInterface {
     message: string
@@ -35,6 +36,7 @@ const WhiteList: React.FC = () => {
         {} as AlertInterface
     )
     const whitelistService = new WhitelistService()
+    const googleAnalyticsService = new GoogleAnalyticsService()
 
     const whitelistItems: ScoreInterface[] = [
         {
@@ -109,6 +111,7 @@ const WhiteList: React.FC = () => {
             setModalAlertData({ message, type: 'error' })
         } finally {
             setModalAlertOpen(true)
+            googleAnalyticsService.emit('click_register_email', data.email)
         }
     }
 
