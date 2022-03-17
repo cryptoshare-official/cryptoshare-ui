@@ -11,8 +11,16 @@ import {
 
 const AppModal: React.FC<AppModalInterface> = props => {
     const backdropEl = useRef(null)
-    const { isOpen, width, height, children, onBackdropClick, header, footer } =
-        props
+    const {
+        isOpen,
+        width,
+        maxWidth,
+        height,
+        children,
+        onBackdropClick,
+        header,
+        footer
+    } = props
 
     useEffect(() => {
         document.body.style.overflow = isOpen ? 'hidden' : 'auto'
@@ -36,7 +44,7 @@ const AppModal: React.FC<AppModalInterface> = props => {
                         animate={fadeScale.animate}
                         initial={fadeScale.initial}
                         variants={fadeScale.variants}
-                        style={{ width: width || 490, height }}
+                        style={{ width: width || 490, maxWidth, height }}
                     >
                         {header && <ModalHeader>{header}</ModalHeader>}
                         <ModalBody>{children}</ModalBody>

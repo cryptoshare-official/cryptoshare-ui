@@ -32,6 +32,8 @@ const AuthModal: React.FC<AuthModalProps> = props => {
     return (
         <AppModal
             height={300}
+            width={'96vw'}
+            maxWidth={490}
             isOpen={isOpen}
             onBackdropClick={onBackdropClick}
         >

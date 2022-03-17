@@ -16,11 +16,10 @@ import Supershare from '@/components/whitelist/supershare'
 import Participate from '@/components/whitelist/participate'
 import AuthModal from '@/components/common/modals/auth-modal'
 import { WhitelistService } from '@/services/whitelist.service'
+import AlertModal from '@/components/common/modals/alert-modal'
 import { ScoreInterface } from '@/interfaces/whitelist.interface'
 import AboutWhitelist from '@/components/whitelist/about-whitelist'
 import GoldListRegister from '@/components/whitelist/gold-list-register'
-import AlertModal from '@/components/common/modals/alert-modal'
-import { ExceptionInterface } from '@/interfaces/exception.interface'
 import { GoogleAnalyticsService } from '@/services/google-analytics.service'
 
 interface AlertInterface {
@@ -29,14 +28,15 @@ interface AlertInterface {
 }
 
 const WhiteList: React.FC = () => {
+    const whitelistService = new WhitelistService()
+    const googleAnalyticsService = new GoogleAnalyticsService()
+
     const [isModalLoginOpen, setModalLoginOpen] = useState(false)
     const [isModalAlertOpen, setModalAlertOpen] = useState(false)
     const translate = useTranslate<WhitelistTranslateType>(locales)
     const [modalAlertData, setModalAlertData] = useState<AlertInterface>(
         {} as AlertInterface
     )
-    const whitelistService = new WhitelistService()
-    const googleAnalyticsService = new GoogleAnalyticsService()
 
     const whitelistItems: ScoreInterface[] = [
         {

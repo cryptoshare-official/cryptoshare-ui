@@ -1,10 +1,9 @@
 import React from 'react'
 
-import { Body, Text, Button, Icon } from './styles'
+import { Body, Text, Icon } from './styles'
 import AppModal from '@/components/common/modals/app-modal'
 import { AppModalInterface } from '@/interfaces/modal.interface'
 import {
-    BsFillCheckCircleFill,
     BsFillExclamationCircleFill,
     BsFillExclamationTriangleFill
 } from 'react-icons/bs'
@@ -18,27 +17,25 @@ interface AlertModalProps extends AppModalInterface {
 }
 
 const AlertModal: React.FC<AlertModalProps> = props => {
-    const { isOpen, onBackdropClick, onClose, message, type } = props
+    const { isOpen, onBackdropClick, message, type } = props
 
     const iconDisct = {
         success: <AiOutlineCheck />,
-        // success: <BsFillCheckCircleFill />,AiOutlineCheck
         error: <BsFillExclamationCircleFill />,
         warning: <BsFillExclamationTriangleFill />
     }
 
     return (
         <AppModal
-            height={300}
+            height={280}
+            width={'96vw'}
+            maxWidth={490}
             isOpen={isOpen}
             onBackdropClick={onBackdropClick}
         >
             <Body>
                 <Icon className={type}>{iconDisct[type]}</Icon>
-
                 <Text>{message}</Text>
-
-                {/* <Button onClick={() => onClose}>Login</Button> */}
             </Body>
         </AppModal>
     )

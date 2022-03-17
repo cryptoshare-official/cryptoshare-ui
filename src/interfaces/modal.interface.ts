@@ -1,6 +1,7 @@
 export interface AppModalInterface {
-    width?: number
+    width?: number | string
     height?: number | string
+    maxWidth?: number | string
     isOpen: boolean
     header?: JSX.Element
     footer?: JSX.Element

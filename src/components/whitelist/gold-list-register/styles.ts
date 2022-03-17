@@ -21,7 +21,7 @@ export const Label = styled.label`
 export const Input = styled.input``
 
 export const Button = styled(AppButton)`
-    ${tw`uppercase font-semibold sm:w-full`}
+    ${tw`uppercase font-semibold sm:w-full sm:mt-3`}
     width: 40%;
     color: #ffffff;
     border-radius: 4px;
