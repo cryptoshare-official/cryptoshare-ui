@@ -8,6 +8,7 @@ import Document, {
     DocumentInitialProps
 } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
+import enviroments from '@/config/enviroments'
 
 export default class MyDocument extends Document {
     static async getInitialProps(
@@ -51,6 +52,23 @@ export default class MyDocument extends Document {
                     <link
                         href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap"
                         rel="stylesheet"
+                    />
+
+                    <script
+                        async
+                        src={`https://www.googletagmanager.com/gtag/js?id=${enviroments.GA_KEY}`}
+                    ></script>
+
+                    <script
+                        dangerouslySetInnerHTML={{
+                            __html: `
+                                window.dataLayer = window.dataLayer || []
+                                function gtag() { dataLayer.push(arguments) }
+
+                                gtag('js', new Date())
+                                gtag('config', '${enviroments.GA_KEY}')
+                            `
+                        }}
                     />
 
                     <link rel="icon" href="/favicon.ico" />

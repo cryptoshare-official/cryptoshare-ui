@@ -15,18 +15,15 @@ export const Content = styled.article`
 `
 
 export const ControlsContainer = styled.div`
-    ${tw`flex items-center relative bottom-12 sm:bottom-8`}
+    ${tw`flex items-center relative bottom-12 sm:bottom-6`}
 `
 
 export const Dot = styled.button`
-    ${tw`mx-2 rounded-full`}
-    width: 8px;
-    height: 8px;
+    ${tw`mx-2 rounded-full w-2 h-2 sm:w-1.5 sm:h-1.5`}
     background: ${props => props.theme.colors.secondary};
 
     &.active {
-        width: 15px;
-        height: 15px;
+        ${tw`w-3.5 h-3.5 sm:w-2.5 sm:h-2.5`}
     }
 
     &:first-child {

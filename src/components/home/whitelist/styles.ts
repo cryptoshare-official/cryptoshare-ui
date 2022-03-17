@@ -12,7 +12,7 @@ export const Content = styled(AppContainer)`
 `
 
 export const Title = styled.h1`
-    ${tw`flex text-lg font-bold sm:text-sm sm:w-2/4`}
+    ${tw`flex text-lg mr-8 sm:mr-0 font-bold sm:text-sm sm:w-2/4`}
     color: #ffffff;
     font-size: 40px;
     font-weight: bold;

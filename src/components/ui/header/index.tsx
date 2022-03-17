@@ -24,6 +24,7 @@ import {
 
 const Header: React.FC = () => {
     const router = useRouter()
+    const [scrollTop, setScrollTop] = useState(0)
     const [openMenu, setOpenMenu] = useState(false)
     const translate = useTranslate<HeaderTranslateType>(locales)
 
@@ -36,7 +37,7 @@ const Header: React.FC = () => {
 
     const headerTranparentRoutes = ['/']
 
-    useEffect(() => transparentHeaderControl())
+    useEffect(() => transparentHeaderControl(), [scrollTop])
     useEffect(() => {
         if (openMenu) {
             const nav = document.getElementById('navHeader')
@@ -57,8 +58,11 @@ const Header: React.FC = () => {
         document.addEventListener('scroll', () => {
             const top = (window.pageYOffset || scrollTop) - (clientTop || 0)
             top <= 115 ? add() : remove()
+            setScrollTop(top)
             setOpenMenu(false)
         })
+
+        document.removeEventListener('scroll', () => {})
     }
 
     const onClickLink = (link: HeaderInterface) => {

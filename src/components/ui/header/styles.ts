@@ -6,7 +6,7 @@ export const Nav = styled.nav`
     ${tw`flex flex-col justify-center fixed w-full`}
 
     z-index: 10;
-    transition: all ease-out 0.5s;
+    transition: all ease-out 0.3s;
     box-shadow: 0px 4px 16px 0px #adb4b43d;
     height: ${props => props.theme.variables.navHeight};
     background: ${props => props.theme.colors.background};
@@ -23,6 +23,10 @@ export const Container = styled(AppContainer)`
 
 export const LogoContainer = styled.figure`
     ${tw`mr-4 py-1 cursor-pointer`}
+
+    > img {
+        ${tw`sm:w-3/4`}
+    }
 `
 
 export const LinkGroup = styled.article`
@@ -49,6 +53,7 @@ export const Hamburguer = styled.button`
 
     > div {
         ${tw`w-8 h-0.5 bg-gray-600`}
+        background: ${props => props.theme.colors.gradient}
     }
 `
 
@@ -79,7 +84,6 @@ export const ResponsiveLinkGroup = styled.article`
         color: ${props => props.theme.colors.secondary};
     }
 `
-
 export const ResponsiveOptionsGroup = styled.article`
     ${tw`flex ml-auto items-center justify-between mt-8 px-2`}
 `
