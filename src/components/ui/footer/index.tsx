@@ -32,9 +32,9 @@ const Footer: React.FC = () => {
     ) as LanguageStateInterface
 
     const discordLinks = {
-        [LanguageTypes.pt]: 'https://discord.gg/8Smuuf3c',
-        [LanguageTypes.en]: 'https://discord.gg/gpCbyuxp',
-        [LanguageTypes.es]: 'https://discord.gg/EwW9mkmT'
+        [LanguageTypes.pt]: 'https://discord.gg/dAU8NhRAfc',
+        [LanguageTypes.en]: 'https://discord.gg/84XQWU6PrD',
+        [LanguageTypes.es]: 'https://discord.com/invite/txMyZuHydZ'
     }
     const facebookLinks = {
         [LanguageTypes.pt]:
@@ -57,6 +57,11 @@ const Footer: React.FC = () => {
         [LanguageTypes.es]:
             'https://www.instagram.com/cryptoshare_oficial_espanol/?utm_medium=copy_link'
     }
+    const twitterLinks = {
+        [LanguageTypes.pt]: 'https://twitter.com/CryptoShare_pt',
+        [LanguageTypes.en]: 'https://twitter.com/CryptoShare_En',
+        [LanguageTypes.es]: 'https://twitter.com/CryptoShare_Es'
+    }
 
     const socialItems = [
         {
@@ -69,11 +74,11 @@ const Footer: React.FC = () => {
             icon: <FaFacebookF />,
             link: facebookLinks[currentLanguage]
         },
-        // {
-        //     title: 'Twitter',
-        //     icon: <FaTwitter />,
-        //     link: 'https://www.twitter.com'
-        // },
+        {
+            title: 'Twitter',
+            icon: <FaTwitter />,
+            link: twitterLinks[currentLanguage]
+        },
         {
             title: 'Instagram',
             icon: <FaInstagram />,
