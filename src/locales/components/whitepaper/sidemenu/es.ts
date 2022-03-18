@@ -8,7 +8,7 @@ const es: WhitepaperSideMenuTranslateType = {
     // assets
     assets: 'Activos',
     cryptoRealEstate: 'Crypto Bienes Raíces',
-    cryptoStatup: 'Crypto Statups',
+    cryptoStatup: 'Crypto Startups',
     cryptoFranchise: 'Crypto Franquicia',
     cryptoBusiness: 'Crypto Negocios',
     profitSharing: 'Reparto de Utilidades',

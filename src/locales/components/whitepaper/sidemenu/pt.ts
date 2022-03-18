@@ -6,7 +6,7 @@ const pt = {
     // assets
     assets: 'Ativos',
     cryptoRealEstate: 'Crypto Imóveis',
-    cryptoStatup: 'Crypto Statups',
+    cryptoStatup: 'Crypto Startups',
     cryptoFranchise: 'Crypto Franquia',
     cryptoBusiness: 'Crypto Negócio',
     profitSharing: 'Divisão de Lucros',
