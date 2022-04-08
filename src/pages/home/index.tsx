@@ -1,6 +1,5 @@
 import { useMapState } from '@/hooks'
 import React, { useEffect } from 'react'
-import Meet from '@/components/home/meet'
 import Member from '@/components/home/member'
 import Roadmap from '@/components/home/roadmap'
 import AppHead from '@/components/common/app-head'
@@ -33,7 +32,6 @@ const Home: React.FC = () => {
             <OurAssets />
             <WhiteList />
             <Member />
-            <Meet />
             <Roadmap />
         </>
     )

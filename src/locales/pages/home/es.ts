@@ -35,15 +35,6 @@ const es: HomeTranslateType = {
         \nLa propiedad de la partida Oro, Plata y Bronce libera el derecho a adquirir bienes de cualquier tipo con una ventaja de anticipación de 1 día, 4 horas, 1 hora en relación a la venta pública respectivamente y tiene un peso de 200 votos, 50 votos y 10 votos respectivamente, pudiendo el NFT de tipo Hierro liberar el derecho de compra de cualquier activo, pero solo durante la venta pública.
     `,
 
-    //Meet
-    getToKnowCryptoshare: `Conozca Cryptoshare`,
-    purposeTitle: `Propósito`,
-    missionTitle: `Misión`,
-    visionAndValuesTitle: `Visión y Valores`,
-    purposeDescription: `Crypto Share nació en un momento de expansión web 3.0 y con toda la tecnología basada en la confianza que nos brinda esta revolución, ahora tenemos los medios para democratizar inversiones que antes eran inalcanzables para la gran mayoría de los inversores.`,
-    missionDescription: `Democratizar las inversiones para que inversionistas con cualquier tamaño de capital puedan participar en proyectos más grandes aún sin tener suficiente estructura, conocimiento y dinero para estos proyectos.`,
-    visionAndValuesDescription: `Ser conocidos como la plataforma de inversión democratizada líder en web 3.0 y lograr este objetivo en base a nuestros tres pilares: transparencia, integridad y democratización.`,
-
     //RoadMap
     secondQuarter: `Segundo cuarto`,
     thirdQuarter: `Tercer cuarto`,

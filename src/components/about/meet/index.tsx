@@ -1,6 +1,6 @@
 import React from 'react'
-import locale from '@/locales/pages/home'
-import { HomeTranslateType } from '@/locales/types'
+import locale from '@/locales/pages/about'
+import { AboutTranslateType } from '@/locales/types'
 import { useTranslate } from '@/hooks/translate.hook'
 import Leaf from '@/assets/images/home/icons/leaf.png'
 import Puzzle from '@/assets/images/home/icons/puzzle.png'
@@ -19,7 +19,7 @@ import {
 } from './styles'
 
 const Meet: React.FC = () => {
-    const translate = useTranslate<HomeTranslateType>(locale)
+    const translate = useTranslate<AboutTranslateType>(locale)
 
     const items = [
         {

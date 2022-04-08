@@ -32,10 +32,11 @@ const Header: React.FC = () => {
         { name: 'Home', path: '/', scrollTo: '' },
         { name: translate.assets, path: '', scrollTo: 'assets' },
         { name: translate.meet, path: '', scrollTo: 'meet' },
-        { name: 'Roadmap', path: '', scrollTo: 'roadmap' }
+        { name: 'Roadmap', path: '', scrollTo: 'roadmap' },
+        { name: translate.about, path: '/about', scrollTo: '' }
     ]
 
-    const headerTranparentRoutes = ['/']
+    const headerTranparentRoutes = ['/', '/about']
 
     useEffect(() => transparentHeaderControl(), [scrollTop])
     useEffect(() => {

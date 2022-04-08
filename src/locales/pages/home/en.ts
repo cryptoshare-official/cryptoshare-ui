@@ -35,15 +35,6 @@ const en: HomeTranslateType = {
         \nOwnership of the Gold, Silver and Bronze item releases the right to purchase assets of any type with an anticipation advantage of 1 day, 4 hours, 1 hour in relation to the public sale respectively and has a weight of 200 votes, 50 votes and 10 votes respectively, with the Iron-type NFT being able to release the right to purchase any asset, but only during the public sale.
     `,
 
-    //Meet
-    getToKnowCryptoshare: `Get to know Cryptoshare`,
-    purposeTitle: `Purpose`,
-    missionTitle: `Mission`,
-    visionAndValuesTitle: `Vision And Values`,
-    purposeDescription: `Crypto Share was born at a time of web 3.0 expansion and with all the technology based on trust that this revolution provides us, we now have the means to democratize investments that were previously unattainable for the vast majority of investors.`,
-    missionDescription: `Democratize investments so that investors with any size of capital can participate in larger projects even without having enough structure, knowledge and money for these projects.`,
-    visionAndValuesDescription: `To be known as the leading democratized investment platform on web 3.0 and to achieve this objective based on our three pillars: transparency, integrity and democratization.`,
-
     //RoadMap
     secondQuarter: `Second quarter`,
     thirdQuarter: `Third quarter`,

@@ -1,4 +1,5 @@
 import home from '@/locales/pages/home/pt'
+import about from '@/locales/pages/about/pt'
 import header from '@/locales/components/header/pt'
 import footer from '@/locales/components/footer/pt'
 import whitelist from '@/locales/pages/whitelist/pt'
@@ -9,6 +10,7 @@ import whitepaperICOProgram from '@/locales/pages/whitepaper/economy/ico-program
 import whitepaperCryptocurrencies from '@/locales/pages/whitepaper/economy/cryptocurrencies/pt'
 
 export type HomeTranslateType = typeof home
+export type AboutTranslateType = typeof about
 export type HeaderTranslateType = typeof header
 export type FooterTranslateType = typeof footer
 export type WhitelistTranslateType = typeof whitelist
