@@ -1,40 +1,46 @@
 import React from 'react'
 import locale from '@/locales/pages/about'
-import { useTranslate } from '@/hooks/translate.hook'
 import { AboutTranslateType } from '@/locales/types'
+import { useTranslate } from '@/hooks/translate.hook'
 import AppSection from '@/components/common/app-section'
+import SeisInSeteLogo from '@/assets/images/partners/6in7.png'
 
-import { Container, Content, Image } from './styles'
-import BubbleBG from '@/components/common/bubble-bg'
+import { Container, Content, CardImage, Image } from './styles'
+import AppBackgroundBubble from '@/components/common/app-background-bubble'
 
 const Partners: React.FC = () => {
     const translate = useTranslate<AboutTranslateType>(locale)
-    const fakeURI =
-        'https://public.bnbstatic.com/image/cms/blog/20210802/08a2242e-a7e7-49cf-85e6-df0431389b55.png'
 
     const partners = [
-        { uri: fakeURI, name: 'Binance' },
-        { uri: fakeURI, name: 'Binance' },
-        { uri: fakeURI, name: 'Binance' },
-        { uri: fakeURI, name: 'Binance' },
-        { uri: fakeURI, name: 'Binance' },
-        { uri: fakeURI, name: 'Binance' },
-        { uri: fakeURI, name: 'Binance' },
-        { uri: fakeURI, name: 'Binance' }
+        {
+            image: SeisInSeteLogo,
+            link: 'https://6in7.com.br/',
+            mode: 'contain',
+            name: '6In7'
+        }
     ]
 
+    const goToPartner = (link: string) => window.open(link, '_blank')
+
     return (
-        <BubbleBG count={100} minSize={10} maxSize={12}>
+        <AppBackgroundBubble count={125} maxSize={12}>
             <Container>
                 <AppSection title={translate.ourPartners}>
                     <Content>
                         {partners.map((partner, index) => (
-                            <Image src={partner.uri} alt="teste" key={index} />
+                            <CardImage
+                                key={index}
+                                title={partner.name}
+                                className={partner.mode}
+                                onClick={() => goToPartner(partner.link)}
+                            >
+                                <Image alt={partner.name} src={partner.image} />
+                            </CardImage>
                         ))}
                     </Content>
                 </AppSection>
             </Container>
-        </BubbleBG>
+        </AppBackgroundBubble>
     )
 }
 

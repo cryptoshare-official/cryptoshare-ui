@@ -19,36 +19,43 @@ const Team: React.FC = () => {
         {
             image: Wolf,
             name: 'Jonathan Acquesta',
-            office: translate.chiefExecutiveOfficer
+            office: translate.chiefExecutiveOfficer,
+            link: 'https://www.linkedin.com/in/jonathan-caravaggio-acquesta-a26a4422'
         },
         {
             image: Tiger,
             name: 'Thiago Anuzkiewicz',
-            office: translate.chiefTechnologyOfficer
+            office: translate.chiefTechnologyOfficer,
+            link: 'https://www.linkedin.com/in/thiago-vasconcellos-anuzkiewicz-ba070442'
         },
         {
             image: Caterpillar,
             name: 'Milena Lima',
-            office: translate.chiefOperatingOfficer
+            office: translate.chiefOperatingOfficer,
+            link: 'https://www.linkedin.com/in/milena-lima-caravaggio-acquesta-17b779148'
         },
         {
             image: Penguin,
             name: 'Pedro Silva',
-            office: translate.vicePresidentOfEngineering
+            office: translate.vicePresidentOfEngineering,
+            link: 'https://www.linkedin.com/in/pedro-silva-65996a181'
         },
         {
             image: Leopard,
             name: 'Diogo Glinglani',
-            office: translate.chiefMarketingOfficer
+            office: translate.chiefMarketingOfficer,
+            link: 'https://www.linkedin.com/in/diogo-glinglani-1b538b70'
         }
     ]
+
+    const openLink = (link: string) => window.open(link, '_blank')
 
     return (
         <Container>
             <AppSection title={translate.ourTeam}>
                 <Grid>
                     {teamMembers.map((member, index) => (
-                        <View key={index}>
+                        <View key={index} onClick={() => openLink(member.link)}>
                             <Image src={member.image} alt={member.name} />
 
                             <Box>

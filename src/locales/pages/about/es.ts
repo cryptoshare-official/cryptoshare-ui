@@ -6,6 +6,7 @@ const es: AboutTranslateType = {
     aboutCryptoshare: `Sobre Cryptoshare`,
 
     //Meet
+    ourEssence: `Nuestra Esencia`,
     getToKnowCryptoshare: `Conozca Cryptoshare`,
     purposeTitle: `Propósito`,
     missionTitle: `Misión`,

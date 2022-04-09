@@ -19,10 +19,10 @@ const BubbleBG: React.FC<BubbleBGProps> = props => {
         const bubbleStyle = {
             width: `${size}px`,
             height: `${size}px`,
-            background: color || '#a8a9ab',
-            left: `${random(10, 100)}%`,
+            background: color || '#68666647',
+            left: `${random(0, 100)}%`,
             animationDelay: `${random(0, 5)}s`,
-            animationDuration: `${random(4, 12)}s`
+            animationDuration: `${random(12, 18)}s`
         }
 
         return <Bubble key={index} style={bubbleStyle} />

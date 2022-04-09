@@ -10,7 +10,30 @@ export const Content = styled.article`
     ${tw`grid grid-cols-4 gap-4 sm:grid-cols-2`}
 `
 
+export const CardImage = styled.div`
+    ${tw`sm:h-24 h-36 flex w-full bg-white shadow-lg rounded-md items-center justify-center cursor-pointer`}
+    transition: transform 850ms;
+
+    &:hover {
+        transform: scale(0.9);
+    }
+
+    &.contain {
+        ${tw`p-4`}
+
+        > img {
+            ${tw`object-contain`}
+        }
+    }
+
+    &.cover {
+        > img {
+            width: inherit;
+            ${tw`object-cover`}
+        }
+    }
+`
+
 export const Image = styled.img`
-    ${tw`rounded-md drop-shadow-md`}
-    z-index: 5;
+    ${tw`rounded-md h-full`}
 `

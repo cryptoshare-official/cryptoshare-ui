@@ -4,6 +4,7 @@ const pt = {
     aboutCryptoshare: `Sobre a Cryptoshare`,
 
     //Meet
+    ourEssence: `Nossa Essência`,
     getToKnowCryptoshare: `Conheça a Cryptoshare`,
     purposeTitle: `Proposito`,
     missionTitle: `Missão`,
@@ -16,7 +17,7 @@ const pt = {
     ourTeam: `Nosso Time`,
     chiefExecutiveOfficer: `Diretor Executivo`,
     chiefTechnologyOfficer: `Diretor de Tecnologia`,
-    chiefOperatingOfficer: `Diretor de operações`,
+    chiefOperatingOfficer: `Diretora de operações`,
     vicePresidentOfEngineering: `Vice-presidente de Engenharia`,
     chiefMarketingOfficer: `Diretor de marketing`,
 

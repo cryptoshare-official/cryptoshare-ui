@@ -44,7 +44,7 @@ const Meet: React.FC = () => {
             <Content>
                 <Title>
                     <Separator />
-                    {translate.getToKnowCryptoshare}
+                    {translate.ourEssence}
                 </Title>
 
                 <Grid>
