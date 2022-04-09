@@ -24,7 +24,7 @@ const Team: React.FC = () => {
         },
         {
             image: Tiger,
-            name: 'Thiago Anuzkiewicz',
+            name: 'Thiago Anuszkiewicz',
             office: translate.chiefTechnologyOfficer,
             link: 'https://www.linkedin.com/in/thiago-vasconcellos-anuzkiewicz-ba070442'
         },
