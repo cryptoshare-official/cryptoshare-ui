@@ -31,7 +31,6 @@ const Header: React.FC = () => {
     const links: HeaderInterface[] = [
         { name: 'Home', path: '/', scrollTo: '' },
         { name: translate.assets, path: '', scrollTo: 'assets' },
-        { name: translate.meet, path: '', scrollTo: 'meet' },
         { name: 'Roadmap', path: '', scrollTo: 'roadmap' },
         { name: translate.about, path: '/about', scrollTo: '' }
     ]
